@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-// Builds index.html — a matrix of every Cloudflare product.
+// Builds cloudflare/index.html — a matrix of every Cloudflare product.
 //
-//   node tools/build.mjs            use the cache in .cache/ where it exists
-//   node tools/build.mjs --refresh  fetch everything again
+//   node tools/cloudflare.mjs            use the cache in .cache/ where it exists
+//   node tools/cloudflare.mjs --refresh  fetch everything again
 //
 // What is parsed, and from where:
 //   - developers.cloudflare.com/llms.txt   every product, its category, docs link, one-line description
@@ -10,12 +10,12 @@
 //   - www.cloudflare.com/sitemap.xml       every /products/<slug> marketing page
 //   - www.cloudflare.com/products/<slug>   the page title and meta description
 //
-// What is written by hand, in data/products.json:
+// What is written by hand, in data/cloudflare.json:
 //   - which marketing page belongs to which docs product
 //   - Alternatives (if we have to move) and Cost
 //   - products that only have a marketing page, and entries that are not products at all
 //
-// Anything new on either site that data/products.json does not know about is reported at the end,
+// Anything new on either site that data/cloudflare.json does not know about is reported at the end,
 // so a re-run tells you what to curate next.
 
 import { createHash } from 'node:crypto';
@@ -28,7 +28,7 @@ const CACHE = join(ROOT, '.cache');
 const REFRESH = process.argv.includes('--refresh');
 const DOCS = 'https://developers.cloudflare.com';
 const WWW = 'https://www.cloudflare.com';
-const UA = 'Mozilla/5.0 (cloudflare.oinam.com product matrix)';
+const UA = 'Mozilla/5.0 (stack.oinam.com product matrix)';
 
 // --- fetching, cached on disk -------------------------------------------------------------------
 
@@ -207,7 +207,7 @@ function renderGroup(group, products) {
 }
 
 async function render(groups, total, today, skipped) {
-  const template = await readFile(join(ROOT, 'tools', 'template.html'), 'utf8');
+  const template = await readFile(join(ROOT, 'tools', 'cloudflare.html'), 'utf8');
   const nav = groups
     .map(([g, ps]) => link('#' + g.toLowerCase().replace(/[^a-z0-9]+/g, '-'), `${text(g)} <span class="count">${ps.length}</span>`))
     .join('\n          ');
@@ -225,7 +225,7 @@ async function render(groups, total, today, skipped) {
 // --- main ---------------------------------------------------------------------------------------
 
 await mkdir(CACHE, { recursive: true });
-const curated = JSON.parse(await readFile(join(ROOT, 'data', 'products.json'), 'utf8'));
+const curated = JSON.parse(await readFile(join(ROOT, 'data', 'cloudflare.json'), 'utf8'));
 const entries = curated.products;
 const warnings = [];
 
@@ -252,7 +252,7 @@ const claimed = new Set();
 for (const p of directory) {
   const c = entries[p.id];
   if (!c) {
-    warnings.push(`new in docs, not in data/products.json: ${p.id} (${p.name})`);
+    warnings.push(`new in docs, not in data/cloudflare.json: ${p.id} (${p.name})`);
     products.push(p);
     continue;
   }
@@ -266,7 +266,7 @@ for (const p of directory) {
 for (const [id, c] of Object.entries(entries)) {
   if (c.skip || directory.some((p) => p.id === id)) continue;
   if (!c.docs) {
-    warnings.push(`in data/products.json, gone from docs: ${id}`);
+    warnings.push(`in data/cloudflare.json, gone from docs: ${id}`);
     continue;
   }
   const m = c.www ? meta[c.www] : null;
@@ -294,7 +294,7 @@ function merge(p, c) {
 
 for (const slug of sitemap) {
   if (!claimed.has(slug) && !(curated.ignoreWww || []).includes(slug)) {
-    warnings.push(`new marketing page, not in data/products.json: /products/${slug} — ${meta[slug].title}`);
+    warnings.push(`new marketing page, not in data/cloudflare.json: /products/${slug} — ${meta[slug].title}`);
   }
 }
 for (const p of products) {
@@ -317,8 +317,8 @@ const groups = [...byGroup.entries()]
   .map(([g, ps]) => [g, ps.sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }))]);
 
 const today = new Date().toISOString().slice(0, 10);
-await writeFile(join(ROOT, 'index.html'), await render(groups, products.length, today, skipped));
-console.log(`wrote index.html: ${products.length} products in ${groups.length} groups`);
+await writeFile(join(ROOT, 'cloudflare', 'index.html'), await render(groups, products.length, today, skipped));
+console.log(`wrote cloudflare/index.html: ${products.length} products in ${groups.length} groups`);
 
 if (warnings.length) {
   console.log(`\n${warnings.length} to look at:`);

@@ -6,8 +6,8 @@ edit it by hand. See `README.md` for the sources, the build, and the Pages and D
 
 ## /odo
 
-- Queue: `~/_/Oinam/1-Projects/devCommands/oinam.com-cloudflare.md`
-- Log:   `~/_/Oinam/1-Projects/devLogs/oinam.com-cloudflare.md`
+- Queue: `~/_/Oinam/1-Projects/devCommands/oinam.com-stack.md`
+- Log:   `~/_/Oinam/1-Projects/devLogs/oinam.com-stack.md`
 
 ## Files
 
@@ -25,5 +25,5 @@ edit it by hand. See `README.md` for the sources, the build, and the Pages and D
 - 2-space indentation, never 4.
 - Colours in OKLCH, as tokens on `:root`. Light by default, dark from `prefers-color-scheme` —
   no theme switch.
-- Serif type. Text sits at `max-width: 42rem`, `width: 96%`; the table is allowed `96rem`.
+- Sans-serif system font stack (`system-ui`, …). Text sits at `max-width: 42rem`, `width: 96%`; the table is allowed `96rem`.
 - Smart typography in the text: curly quotes and apostrophes (’ “ ”), proper dashes.

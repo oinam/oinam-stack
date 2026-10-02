@@ -1,12 +1,43 @@
 # Oinam · Cloudflare
 
-> Cloudflare at Oinam
+> Every Cloudflare product in one table — what it does, what it costs, and where we would go instead
 
 https://cloudflare.oinam.com
 
 ---
 
-Plain static HTML — no build step. Whatever is in `main` at the root is the site.
+We build experiments and production sites on Cloudflare and use a small slice of what it offers.
+This page lists all of it: product (linked to its product page), what it does (linked to its docs),
+alternatives if we have to move, and cost.
+
+## Build
+
+`index.html` is generated locally and committed; GitHub Pages serves it as it is. Node 22, no
+dependencies.
+
+```sh
+node tools/build.mjs            # use the fetch cache in .cache/
+node tools/build.mjs --refresh  # fetch everything again
+```
+
+What comes from where:
+
+| Column        | Source                                                                                  |
+| ------------- | --------------------------------------------------------------------------------------- |
+| Products      | [developers.cloudflare.com/llms.txt](https://developers.cloudflare.com/llms.txt), by category |
+| Product page  | `/products/*` in [cloudflare.com/sitemap.xml](https://www.cloudflare.com/sitemap.xml)    |
+| What it does  | The docs' one-line description; the product page's meta description for the rest      |
+| Pricing link  | The `/pricing/` page in each product's own `llms.txt`                                   |
+| Alternatives, Cost | Written by hand in `data/products.json`, checked against Cloudflare's pricing pages |
+
+The build ends with a list of anything to look at: a product new to the docs or the sitemap, one
+that has gone, or one missing a cost or alternatives. Add it to `data/products.json` and rebuild.
+
+- `tools/build.mjs` — fetch, parse, merge, render.
+- `tools/template.html` — the page around the table. Edit this, not `index.html`.
+- `data/products.json` — which product page goes with which docs entry, products that only have a
+  product page (Access, Gateway, Cache Reserve…), what is left out and why, and every Cost and
+  Alternatives entry.
 
 ## Hosting
 

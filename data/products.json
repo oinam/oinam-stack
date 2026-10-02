@@ -1,0 +1,2598 @@
+{
+  "groupOrder": [
+    "Developer platform",
+    "Application performance",
+    "Application security",
+    "Core platform",
+    "Cloudflare One",
+    "Network security",
+    "Consumer services"
+  ],
+  "ignoreWww": [
+    "spectrum-for-minecraft"
+  ],
+  "plans": {
+    "Application performance": "https://www.cloudflare.com/plans/",
+    "Application security": "https://www.cloudflare.com/plans/",
+    "Core platform": "https://www.cloudflare.com/plans/",
+    "Network security": "https://www.cloudflare.com/plans/",
+    "Consumer services": "https://www.cloudflare.com/plans/",
+    "Cloudflare One": "https://www.cloudflare.com/sase/products/access/"
+  },
+  "products": {
+    "access": {
+      "name": "Access",
+      "group": "Cloudflare One",
+      "www": "access",
+      "docs": "https://developers.cloudflare.com/cloudflare-one/access-controls/",
+      "cost": "Free for up to 50 users · Pay-as-you-go $7/user/mo (paid annually) · Contract plans custom price",
+      "alternatives": [
+        {
+          "name": "Tailscale",
+          "url": "https://tailscale.com/"
+        },
+        {
+          "name": "Pomerium",
+          "url": "https://www.pomerium.com/",
+          "note": "open source"
+        },
+        {
+          "name": "Zscaler Private Access",
+          "url": "https://www.zscaler.com/products-and-solutions/zscaler-private-access"
+        },
+        {
+          "name": "Authentik",
+          "url": "https://goauthentik.io/",
+          "note": "self-hosted"
+        }
+      ]
+    },
+    "advanced-certificate-manager": {
+      "name": "Advanced Certificate Manager",
+      "group": "Application performance",
+      "www": "advanced-certificate-manager",
+      "docs": "https://developers.cloudflare.com/ssl/edge-certificates/advanced-certificate-manager/",
+      "cost": "Paid add-on: $10/mo · Unlocks advanced certs (up to 50 hosts), Total TLS, cipher suite control · Enterprise subscription: up to 100 certs per zone",
+      "alternatives": [
+        {
+          "name": "AWS Certificate Manager",
+          "url": "https://aws.amazon.com/certificate-manager/",
+          "note": "AWS"
+        },
+        {
+          "name": "Let's Encrypt",
+          "url": "https://letsencrypt.org/",
+          "note": "free CA"
+        },
+        {
+          "name": "Caddy",
+          "url": "https://caddyserver.com/",
+          "note": "open source"
+        }
+      ]
+    },
+    "agent-setup": {
+      "skip": true,
+      "reason": "Documentation, not a product"
+    },
+    "agents": {
+      "www": "agents",
+      "cost": "No separate price published · Runs on Workers and Durable Objects, billed at their rates · Workers Paid ($5/mo) for production",
+      "alternatives": [
+        {
+          "name": "LangGraph",
+          "url": "https://www.langchain.com/langgraph",
+          "note": "open source"
+        },
+        {
+          "name": "Temporal",
+          "url": "https://temporal.io/",
+          "note": "open source / managed"
+        },
+        {
+          "name": "AWS Bedrock AgentCore",
+          "url": "https://aws.amazon.com/bedrock/agentcore/",
+          "note": "AWS"
+        },
+        {
+          "name": "Vercel AI SDK",
+          "url": "https://ai-sdk.dev/",
+          "note": "open source"
+        }
+      ]
+    },
+    "ai-gateway": {
+      "www": "ai-gateway",
+      "cost": "Free on all plans (analytics, caching, rate limiting) · Logpush needs Workers Paid: 10M req/mo, +$0.05/M · Unified Billing credits +5% fee",
+      "alternatives": [
+        {
+          "name": "LiteLLM",
+          "url": "https://www.litellm.ai/",
+          "note": "open source"
+        },
+        {
+          "name": "Portkey",
+          "url": "https://portkey.ai/",
+          "note": "managed / open source"
+        },
+        {
+          "name": "OpenRouter",
+          "url": "https://openrouter.ai/",
+          "note": "managed"
+        },
+        {
+          "name": "Helicone",
+          "url": "https://www.helicone.ai/",
+          "note": "open source"
+        }
+      ]
+    },
+    "ai-search": {
+      "www": "ai-search",
+      "pricing": "https://developers.cloudflare.com/ai-search/platform/limits-pricing/",
+      "cost": "Free monthly: 5M ingestion tokens, 10 GB-mo, 1K semantic + 1K full-text queries · Then $0.75/M tokens, $2/GB-mo, $0.75/1K queries · Billing from Nov 1, 2026",
+      "alternatives": [
+        {
+          "name": "Amazon Bedrock Knowledge Bases",
+          "url": "https://aws.amazon.com/bedrock/knowledge-bases/",
+          "note": "AWS"
+        },
+        {
+          "name": "Vectara",
+          "url": "https://www.vectara.com/",
+          "note": "managed RAG"
+        },
+        {
+          "name": "Ragflow",
+          "url": "https://ragflow.io/",
+          "note": "open source"
+        },
+        {
+          "name": "LlamaCloud",
+          "url": "https://www.llamaindex.ai/",
+          "note": "managed"
+        }
+      ]
+    },
+    "ai-security-for-apps": {
+      "name": "AI Security for Apps",
+      "group": "Application security",
+      "www": "ai-security-for-apps",
+      "docs": "https://developers.cloudflare.com/waf/detections/ai-security-for-apps/",
+      "cost": "Enterprise paid add-on · Contact sales · LLM endpoint discovery is free on all plans",
+      "alternatives": [
+        {
+          "name": "Lakera Guard",
+          "url": "https://www.lakera.ai/"
+        },
+        {
+          "name": "Protect AI LLM Guard",
+          "url": "https://protectai.com/llm-guard",
+          "note": "open source"
+        },
+        {
+          "name": "AWS Bedrock Guardrails",
+          "url": "https://aws.amazon.com/bedrock/guardrails/",
+          "note": "AWS"
+        },
+        {
+          "name": "NVIDIA NeMo Guardrails",
+          "url": "https://github.com/NVIDIA/NeMo-Guardrails",
+          "note": "open source"
+        }
+      ]
+    },
+    "analytics": {
+      "www": "analytics",
+      "cost": "Free on all plans · Analytics Engine: $0.25 per extra million writes on Workers Paid (not billed yet)",
+      "alternatives": [
+        {
+          "name": "Plausible",
+          "url": "https://plausible.io/",
+          "note": "open source"
+        },
+        {
+          "name": "PostHog",
+          "url": "https://posthog.com/",
+          "note": "open source"
+        },
+        {
+          "name": "Umami",
+          "url": "https://umami.is/",
+          "note": "self-hosted"
+        },
+        {
+          "name": "Google Analytics",
+          "url": "https://marketingplatform.google.com/about/analytics/"
+        }
+      ]
+    },
+    "api-shield": {
+      "www": "api-shield",
+      "cost": "Free: schema validation (100 saved endpoints, 5 schemas) · Pro 250 and Business 500 endpoints · Full API Shield: Enterprise · Contact sales",
+      "alternatives": [
+        {
+          "name": "AWS WAF",
+          "url": "https://aws.amazon.com/waf/",
+          "note": "AWS"
+        },
+        {
+          "name": "Akamai API Security",
+          "url": "https://www.akamai.com/products/api-security"
+        },
+        {
+          "name": "Traceable",
+          "url": "https://www.traceable.ai/"
+        },
+        {
+          "name": "Kong Gateway",
+          "url": "https://konghq.com/products/kong-gateway",
+          "note": "open source"
+        }
+      ]
+    },
+    "argo-smart-routing": {
+      "www": "argo-smart-routing",
+      "cost": "Paid add-on: Smart Shield + Argo from $5/mo, plus usage-based billing · Needs a billing profile · Attack traffic mitigated by Cloudflare is not billed",
+      "alternatives": [
+        {
+          "name": "AWS Global Accelerator",
+          "url": "https://aws.amazon.com/global-accelerator/",
+          "note": "AWS"
+        },
+        {
+          "name": "Akamai SureRoute",
+          "url": "https://www.akamai.com/products/sureroute",
+          "note": "Akamai"
+        },
+        {
+          "name": "Fastly",
+          "url": "https://www.fastly.com/",
+          "note": "CDN"
+        }
+      ]
+    },
+    "artifacts": {
+      "www": "artifacts",
+      "cost": "Workers Paid ($5/mo) only · 10K ops + 1 GB included · Then $0.15/1K ops, $0.50/GB-mo · Billing starts Oct 14, 2026",
+      "alternatives": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/",
+          "note": "managed"
+        },
+        {
+          "name": "GitLab",
+          "url": "https://about.gitlab.com/",
+          "note": "managed / self-hosted"
+        },
+        {
+          "name": "Gitea",
+          "url": "https://about.gitea.com/",
+          "note": "self-hosted"
+        },
+        {
+          "name": "Forgejo",
+          "url": "https://forgejo.org/",
+          "note": "self-hosted"
+        }
+      ]
+    },
+    "automatic-platform-optimization": {
+      "www": "automatic-platform-optimization",
+      "cost": "Free plan: $5/mo · Included with Pro ($20/mo), Business and Enterprise · WordPress only, needs the Cloudflare plugin",
+      "alternatives": [
+        {
+          "name": "WP Rocket",
+          "url": "https://wp-rocket.me/",
+          "note": "WordPress plugin"
+        },
+        {
+          "name": "Fastly",
+          "url": "https://www.fastly.com/",
+          "note": "CDN"
+        },
+        {
+          "name": "Varnish Cache",
+          "url": "https://varnish-cache.org/",
+          "note": "open source"
+        }
+      ]
+    },
+    "basin": {
+      "www": "data-platform",
+      "cost": "Pipelines: 50 GB transforms + 50 GB sinks free, then $0.04/GB, $0.03-0.06/GB · Catalog: 1M ops, then $9/M · SQL: 10 GB, then $2.50/TB · R2 extra",
+      "alternatives": [
+        {
+          "name": "Snowflake",
+          "url": "https://www.snowflake.com/",
+          "note": "managed"
+        },
+        {
+          "name": "Databricks",
+          "url": "https://www.databricks.com/",
+          "note": "managed"
+        },
+        {
+          "name": "ClickHouse",
+          "url": "https://clickhouse.com/",
+          "note": "open source / managed"
+        },
+        {
+          "name": "Apache Iceberg + Trino",
+          "url": "https://iceberg.apache.org/",
+          "note": "self-hosted"
+        }
+      ]
+    },
+    "billing": {
+      "skip": true,
+      "reason": "Account billing, not a product"
+    },
+    "bots": {
+      "www": [
+        "bot-mitigation",
+        "bot-management"
+      ],
+      "cost": "Free: Bot Fight Mode · Pro ($20/mo): Super Bot Fight Mode · Business ($200/mo): more bots, analytics · Bot Management: Enterprise add-on",
+      "alternatives": [
+        {
+          "name": "DataDome",
+          "url": "https://datadome.co/"
+        },
+        {
+          "name": "HUMAN Security",
+          "url": "https://www.humansecurity.com/"
+        },
+        {
+          "name": "AWS WAF Bot Control",
+          "url": "https://aws.amazon.com/waf/features/bot-control/",
+          "note": "AWS"
+        },
+        {
+          "name": "CrowdSec",
+          "url": "https://www.crowdsec.net/",
+          "note": "open source"
+        }
+      ]
+    },
+    "browser-isolation": {
+      "name": "Browser Isolation",
+      "group": "Cloudflare One",
+      "www": "browser-isolation",
+      "docs": "https://developers.cloudflare.com/cloudflare-one/remote-browser-isolation/",
+      "cost": "Add-on to Zero Trust Pay-as-you-go ($7/user/mo base) and Enterprise · Not on Free plan · Add-on price not published",
+      "alternatives": [
+        {
+          "name": "Menlo Security",
+          "url": "https://www.menlosecurity.com/"
+        },
+        {
+          "name": "Zscaler Browser Isolation",
+          "url": "https://www.zscaler.com/products-and-solutions/browser-isolation"
+        },
+        {
+          "name": "Island",
+          "url": "https://www.island.io/"
+        },
+        {
+          "name": "Kasm Workspaces",
+          "url": "https://www.kasmweb.com/",
+          "note": "open source"
+        }
+      ]
+    },
+    "browser-run": {
+      "www": "browser-rendering",
+      "cost": "Free: 10 min/day, 3 concurrent browsers · Paid: 10 hrs/mo then $0.09/hr, 10 browsers then $2/browser · Quick Actions bill browser hours only",
+      "alternatives": [
+        {
+          "name": "Browserbase",
+          "url": "https://www.browserbase.com/",
+          "note": "managed"
+        },
+        {
+          "name": "Browserless",
+          "url": "https://www.browserless.io/",
+          "note": "managed / self-hosted"
+        },
+        {
+          "name": "Playwright",
+          "url": "https://playwright.dev/",
+          "note": "open source"
+        },
+        {
+          "name": "Puppeteer",
+          "url": "https://pptr.dev/",
+          "note": "open source"
+        }
+      ]
+    },
+    "cache": {
+      "www": "cdn",
+      "cost": "Free on all plans · Enterprise only: custom cache keys, cache by device type, prefetch URLs · Cache Reserve is a separate paid add-on",
+      "alternatives": [
+        {
+          "name": "Amazon CloudFront",
+          "url": "https://aws.amazon.com/cloudfront/",
+          "note": "AWS"
+        },
+        {
+          "name": "Fastly",
+          "url": "https://www.fastly.com/",
+          "note": "CDN"
+        },
+        {
+          "name": "Varnish Cache",
+          "url": "https://varnish-cache.org/",
+          "note": "open source"
+        },
+        {
+          "name": "Bunny CDN",
+          "url": "https://bunny.net/cdn/"
+        }
+      ]
+    },
+    "cache-reserve": {
+      "name": "Cache Reserve",
+      "group": "Application performance",
+      "www": "cache-reserve",
+      "docs": "https://developers.cloudflare.com/cache/advanced-configuration/cache-reserve/",
+      "cost": "Usage-based: $0.015/GB-month storage + $4.50/M writes + $0.36/M reads · Needs a paid plan · CDN itself stays free",
+      "alternatives": [
+        {
+          "name": "Amazon CloudFront Origin Shield",
+          "url": "https://aws.amazon.com/cloudfront/",
+          "note": "AWS"
+        },
+        {
+          "name": "Fastly Origin Shielding",
+          "url": "https://www.fastly.com/",
+          "note": "CDN"
+        },
+        {
+          "name": "Varnish Cache",
+          "url": "https://varnish-cache.org/",
+          "note": "open source"
+        }
+      ]
+    },
+    "china-network": {
+      "www": "china-network",
+      "cost": "Enterprise only · Separate subscription · Contact sales · Needs an ICP number",
+      "alternatives": [
+        {
+          "name": "Alibaba Cloud CDN",
+          "url": "https://www.alibabacloud.com/product/cdn"
+        },
+        {
+          "name": "Tencent Cloud CDN",
+          "url": "https://www.tencentcloud.com/products/cdn"
+        },
+        {
+          "name": "Akamai",
+          "url": "https://www.akamai.com/",
+          "note": "CDN"
+        }
+      ]
+    },
+    "client-side-security": {
+      "www": "page-shield",
+      "cost": "Free: script monitoring · Business ($200/mo): connection and cookie monitoring, alerts · Advanced add-on: $0.099/1k requests (malicious script and code change detection)",
+      "alternatives": [
+        {
+          "name": "Jscrambler",
+          "url": "https://jscrambler.com/"
+        },
+        {
+          "name": "Feroot",
+          "url": "https://www.feroot.com/"
+        },
+        {
+          "name": "Akamai Client-Side Protection & Compliance",
+          "url": "https://www.akamai.com/products/client-side-protection-and-compliance"
+        },
+        {
+          "name": "Content-Security-Policy via report-uri",
+          "url": "https://report-uri.com/"
+        }
+      ]
+    },
+    "cloudflare-for-platforms": {
+      "www": "workers-for-platforms",
+      "cost": "$25/mo (Workers for Platforms) · 20M requests, 60M CPU-ms, 1,000 scripts included · Then $0.30/M req, $0.02/M CPU-ms, $0.02/script",
+      "alternatives": [
+        {
+          "name": "Deno Subhosting",
+          "url": "https://deno.com/subhosting",
+          "note": "managed"
+        },
+        {
+          "name": "Fly.io Machines",
+          "url": "https://fly.io/",
+          "note": "managed"
+        },
+        {
+          "name": "AWS Lambda",
+          "url": "https://aws.amazon.com/lambda/",
+          "note": "AWS"
+        },
+        {
+          "name": "Knative",
+          "url": "https://knative.dev/",
+          "note": "self-hosted"
+        }
+      ]
+    },
+    "cloudflare-network-firewall": {
+      "www": "network-firewall",
+      "cost": "Enterprise only · Standard features included with Magic Transit or Cloudflare WAN · Advanced features cost extra",
+      "alternatives": [
+        {
+          "name": "Palo Alto Networks Prisma Access",
+          "url": "https://www.paloaltonetworks.com/sase/access"
+        },
+        {
+          "name": "Zscaler Cloud Firewall",
+          "url": "https://www.zscaler.com/"
+        },
+        {
+          "name": "pfSense",
+          "url": "https://www.pfsense.org/",
+          "note": "self-hosted"
+        },
+        {
+          "name": "OPNsense",
+          "url": "https://opnsense.org/",
+          "note": "open source"
+        }
+      ]
+    },
+    "cloudflare-wan": {
+      "www": "wan",
+      "cost": "Enterprise only · Contact sales",
+      "alternatives": [
+        {
+          "name": "Zscaler",
+          "url": "https://www.zscaler.com/"
+        },
+        {
+          "name": "Palo Alto Networks Prisma SD-WAN",
+          "url": "https://www.paloaltonetworks.com/sase/sd-wan"
+        },
+        {
+          "name": "Fortinet Secure SD-WAN",
+          "url": "https://www.fortinet.com/products/sd-wan"
+        },
+        {
+          "name": "Tailscale",
+          "url": "https://tailscale.com/",
+          "note": "mesh VPN"
+        }
+      ]
+    },
+    "containers": {
+      "www": "containers",
+      "cost": "Workers Paid ($5/mo) required · Included: 25 GiB-hr, 375 vCPU-min, 200 GB-hr · Then $0.000020/vCPU-s, $0.0000025/GiB-s · Egress from $0.025/GB, 1 TB incl.",
+      "alternatives": [
+        {
+          "name": "AWS Fargate",
+          "url": "https://aws.amazon.com/fargate/",
+          "note": "AWS"
+        },
+        {
+          "name": "Google Cloud Run",
+          "url": "https://cloud.google.com/run",
+          "note": "Google Cloud"
+        },
+        {
+          "name": "Fly.io Machines",
+          "url": "https://fly.io/",
+          "note": "managed"
+        },
+        {
+          "name": "Kubernetes",
+          "url": "https://kubernetes.io/",
+          "note": "self-hosted"
+        }
+      ]
+    },
+    "custom-domain-protection": {
+      "name": "Custom Domain Protection",
+      "group": "Core platform",
+      "www": "custom-domain-protection",
+      "docs": "https://developers.cloudflare.com/registrar/custom-domain-protection/",
+      "cost": "Enterprise only · Contact account team",
+      "alternatives": [
+        {
+          "name": "MarkMonitor",
+          "url": "https://www.markmonitor.com/"
+        },
+        {
+          "name": "CSC Digital Brand Services",
+          "url": "https://www.cscdbs.com/"
+        },
+        {
+          "name": "Gandi",
+          "url": "https://www.gandi.net/"
+        }
+      ]
+    },
+    "d1": {
+      "www": "d1",
+      "cost": "Free: 5M rows read + 100K written/day, 5 GB · Paid: 25B reads + 50M writes/mo, then $0.001/M reads, $1/M writes, $0.75/GB-mo · No egress fees",
+      "alternatives": [
+        {
+          "name": "Turso",
+          "url": "https://turso.tech/",
+          "note": "SQLite"
+        },
+        {
+          "name": "Neon",
+          "url": "https://neon.com/",
+          "note": "Postgres"
+        },
+        {
+          "name": "PlanetScale",
+          "url": "https://planetscale.com/",
+          "note": "managed"
+        },
+        {
+          "name": "SQLite",
+          "url": "https://sqlite.org/",
+          "note": "self-hosted"
+        }
+      ]
+    },
+    "ddos-protection": {
+      "www": [
+        "ddos",
+        "ddos-for-web"
+      ],
+      "cost": "Free on all plans · Unmetered L3-L7 protection · Advanced DDoS Protection is an Enterprise add-on · Network-level needs Magic Transit",
+      "alternatives": [
+        {
+          "name": "AWS Shield",
+          "url": "https://aws.amazon.com/shield/",
+          "note": "AWS"
+        },
+        {
+          "name": "Akamai Prolexic",
+          "url": "https://www.akamai.com/products/prolexic-solutions"
+        },
+        {
+          "name": "Fastly DDoS Protection",
+          "url": "https://www.fastly.com/products/ddos-protection"
+        },
+        {
+          "name": "CrowdSec",
+          "url": "https://www.crowdsec.net/",
+          "note": "open source"
+        }
+      ]
+    },
+    "dlp": {
+      "name": "Data Loss Prevention",
+      "group": "Cloudflare One",
+      "www": "dlp",
+      "docs": "https://developers.cloudflare.com/cloudflare-one/data-loss-prevention/",
+      "cost": "Free: limited predefined profiles on Free and Pay-as-you-go · Full DLP is an Enterprise add-on · Price not published",
+      "alternatives": [
+        {
+          "name": "Netskope",
+          "url": "https://www.netskope.com/"
+        },
+        {
+          "name": "Microsoft Purview",
+          "url": "https://www.microsoft.com/security/business/microsoft-purview"
+        },
+        {
+          "name": "Nightfall",
+          "url": "https://nightfall.ai/"
+        }
+      ]
+    },
+    "dns": {
+      "www": "dns",
+      "cost": "Free on all plans · Enterprise only: Foundation DNS · DNS Firewall is an Enterprise-only paid add-on",
+      "alternatives": [
+        {
+          "name": "Amazon Route 53",
+          "url": "https://aws.amazon.com/route53/",
+          "note": "AWS"
+        },
+        {
+          "name": "NS1 (IBM)",
+          "url": "https://ns1.com/"
+        },
+        {
+          "name": "PowerDNS",
+          "url": "https://www.powerdns.com/",
+          "note": "open source"
+        },
+        {
+          "name": "deSEC",
+          "url": "https://desec.io/",
+          "note": "free, non-profit"
+        }
+      ]
+    },
+    "docs-for-agents": {
+      "skip": true,
+      "reason": "Documentation, not a product"
+    },
+    "durable-objects": {
+      "www": "durable-objects",
+      "cost": "Free: 100K req/day, 13K GB-s/day, 5 GB SQLite · Paid: 1M req + 400K GB-s/mo, then $0.15/M req, $12.50/M GB-s, $0.20/GB-mo",
+      "alternatives": [
+        {
+          "name": "Akka",
+          "url": "https://akka.io/",
+          "note": "actor model"
+        },
+        {
+          "name": "Orleans",
+          "url": "https://learn.microsoft.com/dotnet/orleans/",
+          "note": "open source"
+        },
+        {
+          "name": "Redis",
+          "url": "https://redis.io/",
+          "note": "self-hosted"
+        },
+        {
+          "name": "Temporal",
+          "url": "https://temporal.io/",
+          "note": "open source / managed"
+        }
+      ]
+    },
+    "email-routing": {
+      "name": "Email Routing",
+      "group": "Developer platform",
+      "www": "email-routing",
+      "docs": "https://developers.cloudflare.com/email-service/configuration/email-routing-addresses/",
+      "pricing": "https://developers.cloudflare.com/email-service/platform/pricing/",
+      "cost": "Free: unlimited inbound routing on Workers Free and Paid · Email Routing Workers billed at Workers rates",
+      "alternatives": [
+        {
+          "name": "ImprovMX",
+          "url": "https://improvmx.com/"
+        },
+        {
+          "name": "ForwardEmail",
+          "url": "https://forwardemail.net/",
+          "note": "open source"
+        },
+        {
+          "name": "Mailgun Routes",
+          "url": "https://www.mailgun.com/"
+        },
+        {
+          "name": "Postfix",
+          "url": "https://www.postfix.org/",
+          "note": "self-hosted"
+        }
+      ]
+    },
+    "email-security": {
+      "name": "Email Security",
+      "group": "Cloudflare One",
+      "www": "email-security",
+      "docs": "https://developers.cloudflare.com/cloudflare-one/email-security/",
+      "cost": "Paid add-on · Contact sales · Free Retro Scan for Microsoft 365 · Not in Free plan",
+      "alternatives": [
+        {
+          "name": "Proofpoint",
+          "url": "https://www.proofpoint.com/"
+        },
+        {
+          "name": "Mimecast",
+          "url": "https://www.mimecast.com/"
+        },
+        {
+          "name": "Abnormal Security",
+          "url": "https://abnormal.ai/"
+        },
+        {
+          "name": "Rspamd",
+          "url": "https://rspamd.com/",
+          "note": "open source"
+        }
+      ]
+    },
+    "email-service": {
+      "www": "email-service",
+      "cost": "Workers Paid ($5/mo) for sending: 3,000 emails/mo incl., then $0.35/1K · Inbound routing free and unlimited · Free plan: verified addresses only",
+      "alternatives": [
+        {
+          "name": "Amazon SES",
+          "url": "https://aws.amazon.com/ses/",
+          "note": "AWS"
+        },
+        {
+          "name": "Resend",
+          "url": "https://resend.com/",
+          "note": "managed"
+        },
+        {
+          "name": "Postmark",
+          "url": "https://postmarkapp.com/",
+          "note": "managed"
+        },
+        {
+          "name": "Postal",
+          "url": "https://postalserver.io/",
+          "note": "self-hosted"
+        }
+      ]
+    },
+    "firewall": {
+      "skip": true,
+      "reason": "Deprecated; replaced by WAF custom rules"
+    },
+    "fundamentals": {
+      "skip": true,
+      "reason": "Account basics, not a product"
+    },
+    "gateway": {
+      "name": "Gateway",
+      "group": "Cloudflare One",
+      "www": [
+        "gateway",
+        "secure-web-gateway"
+      ],
+      "docs": "https://developers.cloudflare.com/cloudflare-one/traffic-policies/",
+      "cost": "Free for up to 50 users · Pay-as-you-go $7/user/mo (paid annually) · Contract plans custom price",
+      "alternatives": [
+        {
+          "name": "Zscaler Internet Access",
+          "url": "https://www.zscaler.com/products-and-solutions/zscaler-internet-access"
+        },
+        {
+          "name": "NextDNS",
+          "url": "https://nextdns.io/"
+        },
+        {
+          "name": "Cisco Umbrella",
+          "url": "https://umbrella.cisco.com/"
+        },
+        {
+          "name": "Pi-hole",
+          "url": "https://pi-hole.net/",
+          "note": "self-hosted"
+        }
+      ]
+    },
+    "hyperdrive": {
+      "www": "hyperdrive",
+      "cost": "Free plan: 100K queries/day · Paid plan: unlimited queries · Pooling and caching included · No egress fees",
+      "alternatives": [
+        {
+          "name": "PgBouncer",
+          "url": "https://www.pgbouncer.org/",
+          "note": "self-hosted"
+        },
+        {
+          "name": "Amazon RDS Proxy",
+          "url": "https://aws.amazon.com/rds/proxy/",
+          "note": "AWS"
+        },
+        {
+          "name": "Prisma Accelerate",
+          "url": "https://www.prisma.io/accelerate",
+          "note": "managed"
+        },
+        {
+          "name": "Supabase Supavisor",
+          "url": "https://supabase.com/",
+          "note": "open source"
+        }
+      ]
+    },
+    "images": {
+      "www": "images",
+      "cost": "Free: 5,000 unique transformations/mo (no overage, new ones error) · Paid: +$0.50/1K transforms, $5/100K stored, $1/100K delivered",
+      "alternatives": [
+        {
+          "name": "Cloudinary",
+          "url": "https://cloudinary.com/",
+          "note": "managed"
+        },
+        {
+          "name": "imgix",
+          "url": "https://imgix.com/",
+          "note": "managed"
+        },
+        {
+          "name": "imgproxy",
+          "url": "https://imgproxy.net/",
+          "note": "self-hosted"
+        },
+        {
+          "name": "Thumbor",
+          "url": "https://www.thumbor.org/",
+          "note": "self-hosted"
+        }
+      ]
+    },
+    "k2": {
+      "www": "k2",
+      "cost": "Public beta · Workers Paid ($5/mo) required · 10 GB storage cap per account · No usage rates published",
+      "alternatives": [
+        {
+          "name": "Apache Kafka",
+          "url": "https://kafka.apache.org/",
+          "note": "open source"
+        },
+        {
+          "name": "Redpanda",
+          "url": "https://www.redpanda.com/",
+          "note": "self-hosted / managed"
+        },
+        {
+          "name": "Amazon Kinesis",
+          "url": "https://aws.amazon.com/kinesis/",
+          "note": "AWS"
+        },
+        {
+          "name": "Apache Pulsar",
+          "url": "https://pulsar.apache.org/",
+          "note": "open source"
+        }
+      ]
+    },
+    "keyless-ssl": {
+      "name": "Keyless SSL",
+      "group": "Application performance",
+      "www": "keyless-ssl",
+      "docs": "https://developers.cloudflare.com/ssl/keyless-ssl/",
+      "cost": "Enterprise add-on · Contact sales · You supply your own CA certificate; TLS 1.3 not supported",
+      "alternatives": [
+        {
+          "name": "AWS CloudHSM",
+          "url": "https://aws.amazon.com/cloudhsm/",
+          "note": "AWS"
+        },
+        {
+          "name": "HashiCorp Vault",
+          "url": "https://www.vaultproject.io/",
+          "note": "self-hosted"
+        },
+        {
+          "name": "Akamai Edge Certificates",
+          "url": "https://www.akamai.com/products/ssl-tls-certificate-management"
+        }
+      ]
+    },
+    "kv": {
+      "www": "kv",
+      "cost": "Free: 100K reads, 1K writes/day, 1 GB · Paid: 10M reads, 1M writes/mo, then $0.50/M reads, $5/M writes, $0.50/GB-mo · No egress fees",
+      "alternatives": [
+        {
+          "name": "Upstash Redis",
+          "url": "https://upstash.com/",
+          "note": "managed"
+        },
+        {
+          "name": "Amazon DynamoDB",
+          "url": "https://aws.amazon.com/dynamodb/",
+          "note": "AWS"
+        },
+        {
+          "name": "Redis",
+          "url": "https://redis.io/",
+          "note": "self-hosted"
+        },
+        {
+          "name": "Vercel Edge Config",
+          "url": "https://vercel.com/docs/edge-config",
+          "note": "Vercel"
+        }
+      ]
+    },
+    "learning-paths": {
+      "skip": true,
+      "reason": "Documentation, not a product"
+    },
+    "load-balancing": {
+      "www": "load-balancing",
+      "cost": "Paid add-on: from $5/mo · Non-Enterprise limit: 20 load balancers, 20 pools, 20 endpoints · Enterprise: custom limits",
+      "alternatives": [
+        {
+          "name": "AWS Elastic Load Balancing",
+          "url": "https://aws.amazon.com/elasticloadbalancing/",
+          "note": "AWS"
+        },
+        {
+          "name": "HAProxy",
+          "url": "https://www.haproxy.org/",
+          "note": "open source"
+        },
+        {
+          "name": "NGINX",
+          "url": "https://nginx.org/",
+          "note": "open source"
+        },
+        {
+          "name": "NS1 Traffic Steering",
+          "url": "https://ns1.com/",
+          "note": "DNS-based"
+        }
+      ]
+    },
+    "log-explorer": {
+      "www": "log-explorer",
+      "cost": "Paid add-on to Application Services or Zero Trust · Billed per GB ingested and stored · No free tier or trial",
+      "alternatives": [
+        {
+          "name": "Datadog",
+          "url": "https://www.datadoghq.com/"
+        },
+        {
+          "name": "Grafana Loki",
+          "url": "https://grafana.com/oss/loki/",
+          "note": "open source"
+        },
+        {
+          "name": "Elastic",
+          "url": "https://www.elastic.co/"
+        },
+        {
+          "name": "ClickHouse",
+          "url": "https://clickhouse.com/",
+          "note": "open source"
+        }
+      ]
+    },
+    "magic-transit": {
+      "www": "magic-transit",
+      "cost": "Enterprise only · Contact sales",
+      "alternatives": [
+        {
+          "name": "Akamai Prolexic",
+          "url": "https://www.akamai.com/products/prolexic-solutions"
+        },
+        {
+          "name": "Radware",
+          "url": "https://www.radware.com/"
+        },
+        {
+          "name": "Imperva Network DDoS",
+          "url": "https://www.imperva.com/products/ddos-protection-services/"
+        },
+        {
+          "name": "Gcore DDoS Protection",
+          "url": "https://gcore.com/"
+        }
+      ]
+    },
+    "mesh": {
+      "www": "mesh",
+      "cost": "Beta · Available on all Cloudflare One accounts incl. Free plan · No separate price published",
+      "alternatives": [
+        {
+          "name": "Tailscale",
+          "url": "https://tailscale.com/"
+        },
+        {
+          "name": "NetBird",
+          "url": "https://netbird.io/",
+          "note": "open source"
+        },
+        {
+          "name": "Headscale",
+          "url": "https://headscale.net/",
+          "note": "self-hosted"
+        },
+        {
+          "name": "ZeroTier",
+          "url": "https://www.zerotier.com/"
+        }
+      ]
+    },
+    "migration-guides": {
+      "skip": true,
+      "reason": "Documentation, not a product"
+    },
+    "network": {
+      "skip": true,
+      "reason": "Zone network settings (IPv6, WebSockets, gRPC), included with every plan"
+    },
+    "network-flow": {
+      "www": "network-flow",
+      "cost": "Free version for all accounts, with flow volume and config limits · Enterprise version for DDoS detection",
+      "alternatives": [
+        {
+          "name": "ntopng",
+          "url": "https://www.ntop.org/products/traffic-analysis/ntop/",
+          "note": "open source"
+        },
+        {
+          "name": "Elastiflow",
+          "url": "https://www.elastiflow.com/"
+        },
+        {
+          "name": "Kentik",
+          "url": "https://www.kentik.com/"
+        },
+        {
+          "name": "pmacct",
+          "url": "https://www.pmacct.net/",
+          "note": "open source"
+        }
+      ]
+    },
+    "network-interconnect": {
+      "www": "network-interconnect",
+      "cost": "Enterprise only · Contact sales",
+      "alternatives": [
+        {
+          "name": "Megaport",
+          "url": "https://www.megaport.com/"
+        },
+        {
+          "name": "Equinix Fabric",
+          "url": "https://www.equinix.com/interconnection-services/equinix-fabric"
+        },
+        {
+          "name": "PacketFabric",
+          "url": "https://packetfabric.com/"
+        }
+      ]
+    },
+    "pages": {
+      "www": "pages",
+      "cost": "Free: static assets unlimited, Functions share 100K Workers requests/day · Paid: Workers Paid ($5/mo), Functions billed as Workers requests",
+      "alternatives": [
+        {
+          "name": "Vercel",
+          "url": "https://vercel.com/"
+        },
+        {
+          "name": "Netlify",
+          "url": "https://www.netlify.com/"
+        },
+        {
+          "name": "AWS Amplify Hosting",
+          "url": "https://aws.amazon.com/amplify/hosting/",
+          "note": "AWS"
+        },
+        {
+          "name": "Coolify",
+          "url": "https://coolify.io/",
+          "note": "self-hosted"
+        }
+      ]
+    },
+    "pulumi": {
+      "skip": true,
+      "reason": "Infrastructure-as-code provider for the other products"
+    },
+    "queues": {
+      "www": "queues",
+      "cost": "Free: 10K ops/day, 24h retention · Workers Paid ($5/mo): 1M ops/mo, then $0.40/M ops · No egress fees",
+      "alternatives": [
+        {
+          "name": "Amazon SQS",
+          "url": "https://aws.amazon.com/sqs/",
+          "note": "AWS"
+        },
+        {
+          "name": "Google Cloud Pub/Sub",
+          "url": "https://cloud.google.com/pubsub"
+        },
+        {
+          "name": "RabbitMQ",
+          "url": "https://www.rabbitmq.com/",
+          "note": "open source"
+        },
+        {
+          "name": "Apache Kafka",
+          "url": "https://kafka.apache.org/",
+          "note": "open source"
+        }
+      ]
+    },
+    "r2": {
+      "www": "r2",
+      "cost": "Free: 10 GB-month, 1M Class A, 10M Class B ops · Then $0.015/GB-month, $4.50/M Class A, $0.36/M Class B · No egress fees",
+      "alternatives": [
+        {
+          "name": "Amazon S3",
+          "url": "https://aws.amazon.com/s3/",
+          "note": "AWS"
+        },
+        {
+          "name": "Backblaze B2",
+          "url": "https://www.backblaze.com/cloud-storage"
+        },
+        {
+          "name": "MinIO",
+          "url": "https://min.io/",
+          "note": "self-hosted"
+        },
+        {
+          "name": "Garage",
+          "url": "https://garagehq.deuxfleurs.fr/",
+          "note": "self-hosted"
+        }
+      ]
+    },
+    "rate-limiting": {
+      "name": "Rate Limiting",
+      "group": "Application security",
+      "www": "rate-limiting",
+      "docs": "https://developers.cloudflare.com/waf/rate-limiting-rules/",
+      "cost": "Free: 1 rule, 10 s period · Pro ($20/mo): 2 rules · Business ($200/mo): 5 rules · Enterprise: 100 rules, Advanced Rate Limiting is a paid add-on",
+      "alternatives": [
+        {
+          "name": "AWS WAF rate-based rules",
+          "url": "https://aws.amazon.com/waf/",
+          "note": "AWS"
+        },
+        {
+          "name": "Fastly Rate Limiting",
+          "url": "https://www.fastly.com/products/web-application-api-protection"
+        },
+        {
+          "name": "NGINX limit_req",
+          "url": "https://nginx.org/en/docs/http/ngx_http_limit_req_module.html",
+          "note": "open source"
+        },
+        {
+          "name": "Envoy",
+          "url": "https://www.envoyproxy.io/",
+          "note": "open source"
+        }
+      ]
+    },
+    "rdp": {
+      "name": "Browser-based RDP",
+      "group": "Cloudflare One",
+      "www": "rdp",
+      "docs": "https://developers.cloudflare.com/cloudflare-one/setup/secure-private-apps/in-browser-rdp/",
+      "cost": "Runs on Access: free for up to 50 users · Pay-as-you-go $7/user/mo (paid annually) · No separate RDP fee found",
+      "alternatives": [
+        {
+          "name": "Apache Guacamole",
+          "url": "https://guacamole.apache.org/",
+          "note": "open source"
+        },
+        {
+          "name": "Teleport",
+          "url": "https://goteleport.com/"
+        },
+        {
+          "name": "Tailscale",
+          "url": "https://tailscale.com/"
+        },
+        {
+          "name": "Azure Bastion",
+          "url": "https://azure.microsoft.com/products/azure-bastion"
+        }
+      ]
+    },
+    "realtime": {
+      "www": [
+        "realtime",
+        "turn-sfu"
+      ],
+      "cost": "A/V participant $0.002/min · Audio-only $0.0005/min · Recording/RTMP/HLS export $0.010/min · Transcription at Workers AI rates",
+      "alternatives": [
+        {
+          "name": "LiveKit",
+          "url": "https://livekit.io/",
+          "note": "open source / cloud"
+        },
+        {
+          "name": "Twilio Video",
+          "url": "https://www.twilio.com/en-us/video"
+        },
+        {
+          "name": "Daily",
+          "url": "https://www.daily.co/"
+        },
+        {
+          "name": "mediasoup",
+          "url": "https://mediasoup.org/",
+          "note": "self-hosted"
+        }
+      ]
+    },
+    "reference-architecture": {
+      "skip": true,
+      "reason": "Documentation, not a product"
+    },
+    "ruleset-engine": {
+      "skip": true,
+      "reason": "The engine under Rules and WAF, not sold on its own"
+    },
+    "sandbox": {
+      "www": "sandboxes",
+      "cost": "Workers Paid ($5/mo) required · Billed at Containers rates: $0.000020/vCPU-s, $0.0000025/GiB-s memory, plus Workers and Durable Objects",
+      "alternatives": [
+        {
+          "name": "E2B",
+          "url": "https://e2b.dev/",
+          "note": "managed"
+        },
+        {
+          "name": "Modal Sandboxes",
+          "url": "https://modal.com/"
+        },
+        {
+          "name": "Daytona",
+          "url": "https://www.daytona.io/",
+          "note": "open source"
+        },
+        {
+          "name": "Firecracker",
+          "url": "https://firecracker-microvm.github.io/",
+          "note": "self-hosted"
+        }
+      ]
+    },
+    "security": {
+      "skip": true,
+      "reason": "A dashboard view over other products"
+    },
+    "spectrum": {
+      "www": "spectrum",
+      "cost": "Not on Free · Pro/Business: paid add-on, one app (Minecraft, SSH; RDP on Business) · Custom TCP/UDP: Enterprise paid add-on",
+      "alternatives": [
+        {
+          "name": "AWS Global Accelerator",
+          "url": "https://aws.amazon.com/global-accelerator/",
+          "note": "AWS"
+        },
+        {
+          "name": "Akamai Prolexic",
+          "url": "https://www.akamai.com/products/prolexic-solutions"
+        },
+        {
+          "name": "HAProxy",
+          "url": "https://www.haproxy.org/",
+          "note": "open source"
+        }
+      ]
+    },
+    "speed": {
+      "www": "website-optimization",
+      "cost": "Free on all plans · Observatory has monthly test quotas · Other optimizations depend on plan",
+      "alternatives": [
+        {
+          "name": "Google PageSpeed Insights",
+          "url": "https://pagespeed.web.dev/"
+        },
+        {
+          "name": "Fastly",
+          "url": "https://www.fastly.com/",
+          "note": "CDN"
+        },
+        {
+          "name": "Amazon CloudFront",
+          "url": "https://aws.amazon.com/cloudfront/",
+          "note": "AWS"
+        }
+      ]
+    },
+    "ssl": {
+      "www": "ssl",
+      "cost": "Free: Universal SSL on all plans · Custom certificates: Business ($200/mo) and up · Advanced Certificate Manager: $10/mo add-on · Keyless SSL: Enterprise add-on",
+      "alternatives": [
+        {
+          "name": "Let's Encrypt",
+          "url": "https://letsencrypt.org/",
+          "note": "free CA"
+        },
+        {
+          "name": "Caddy",
+          "url": "https://caddyserver.com/",
+          "note": "open source"
+        },
+        {
+          "name": "AWS Certificate Manager",
+          "url": "https://aws.amazon.com/certificate-manager/",
+          "note": "AWS"
+        },
+        {
+          "name": "certbot",
+          "url": "https://certbot.eff.org/",
+          "note": "open source"
+        }
+      ]
+    },
+    "stream": {
+      "www": "stream",
+      "cost": "No free tier · Storage $5/mo per 1,000 min stored (prepaid) · Delivery $1 per 1,000 min · Free ingress and encoding, no egress fees",
+      "alternatives": [
+        {
+          "name": "Mux",
+          "url": "https://www.mux.com/"
+        },
+        {
+          "name": "AWS Elemental MediaConvert + CloudFront",
+          "url": "https://aws.amazon.com/mediaconvert/",
+          "note": "AWS"
+        },
+        {
+          "name": "Bunny Stream",
+          "url": "https://bunny.net/stream/"
+        },
+        {
+          "name": "Jellyfin",
+          "url": "https://jellyfin.org/",
+          "note": "self-hosted, closest equivalent"
+        }
+      ]
+    },
+    "style-guide": {
+      "skip": true,
+      "reason": "Documentation, not a product"
+    },
+    "support": {
+      "skip": true,
+      "reason": "Support documentation"
+    },
+    "terraform": {
+      "skip": true,
+      "reason": "Infrastructure-as-code provider for the other products"
+    },
+    "turnstile": {
+      "www": "turnstile",
+      "cost": "Free: unlimited challenges, up to 20 widgets · Enterprise: unlimited widgets, ephemeral IDs, remove branding · Contact sales",
+      "alternatives": [
+        {
+          "name": "hCaptcha",
+          "url": "https://www.hcaptcha.com/"
+        },
+        {
+          "name": "Google reCAPTCHA",
+          "url": "https://www.google.com/recaptcha/about/"
+        },
+        {
+          "name": "Friendly Captcha",
+          "url": "https://friendlycaptcha.com/"
+        },
+        {
+          "name": "Altcha",
+          "url": "https://altcha.org/",
+          "note": "open source"
+        }
+      ]
+    },
+    "use-cases": {
+      "skip": true,
+      "reason": "Documentation, not a product"
+    },
+    "vectorize": {
+      "www": "vectorize",
+      "cost": "Free: 30M queried, 5M stored dimensions/mo · Workers Paid: 50M queried + 10M stored incl., then $0.01/M queried, $0.05/100M stored · No egress fees",
+      "alternatives": [
+        {
+          "name": "Pinecone",
+          "url": "https://www.pinecone.io/"
+        },
+        {
+          "name": "Qdrant",
+          "url": "https://qdrant.tech/",
+          "note": "open source"
+        },
+        {
+          "name": "pgvector",
+          "url": "https://github.com/pgvector/pgvector",
+          "note": "open source"
+        },
+        {
+          "name": "Weaviate",
+          "url": "https://weaviate.io/",
+          "note": "open source"
+        }
+      ]
+    },
+    "waf": {
+      "www": "waf",
+      "cost": "Free: custom rules, Free Managed Ruleset · Pro ($20/mo): full Managed Rules · Business ($200/mo): attack score · Enterprise: AI Security and malicious uploads add-ons",
+      "alternatives": [
+        {
+          "name": "AWS WAF",
+          "url": "https://aws.amazon.com/waf/",
+          "note": "AWS"
+        },
+        {
+          "name": "Fastly Next-Gen WAF",
+          "url": "https://www.fastly.com/products/web-application-api-protection"
+        },
+        {
+          "name": "Coraza",
+          "url": "https://coraza.io/",
+          "note": "open source"
+        },
+        {
+          "name": "ModSecurity",
+          "url": "https://modsecurity.org/",
+          "note": "open source"
+        }
+      ]
+    },
+    "waiting-room": {
+      "www": "waiting-room",
+      "cost": "Not on Free or Pro · Business ($200/mo): 1 basic room · Enterprise: 1 basic room, advanced rooms are a paid add-on",
+      "alternatives": [
+        {
+          "name": "Queue-it",
+          "url": "https://queue-it.com/"
+        },
+        {
+          "name": "Akamai Visitor Prioritization",
+          "url": "https://www.akamai.com/products/visitor-prioritization-cloud"
+        },
+        {
+          "name": "Amazon CloudFront + custom queue",
+          "url": "https://aws.amazon.com/solutions/implementations/virtual-waiting-room-on-aws/",
+          "note": "AWS"
+        }
+      ]
+    },
+    "web3": {
+      "www": "web3",
+      "cost": "Paid add-on (IPFS and Ethereum gateways) · Price shown only in the dashboard · Enterprise can preview without metered fees",
+      "alternatives": [
+        {
+          "name": "Infura",
+          "url": "https://www.infura.io/",
+          "note": "Ethereum"
+        },
+        {
+          "name": "Pinata",
+          "url": "https://pinata.cloud/",
+          "note": "IPFS"
+        },
+        {
+          "name": "Kubo",
+          "url": "https://github.com/ipfs/kubo",
+          "note": "self-hosted IPFS"
+        }
+      ]
+    },
+    "workers": {
+      "www": "workers",
+      "cost": "Free: 100K requests/day, 10 ms CPU/invocation · Workers Paid ($5/mo): 10M req + 30M CPU-ms incl., then $0.30/M req, $0.02/M CPU-ms · No egress fees",
+      "alternatives": [
+        {
+          "name": "AWS Lambda",
+          "url": "https://aws.amazon.com/lambda/",
+          "note": "AWS"
+        },
+        {
+          "name": "Vercel Functions",
+          "url": "https://vercel.com/functions"
+        },
+        {
+          "name": "Deno Deploy",
+          "url": "https://deno.com/deploy"
+        },
+        {
+          "name": "workerd",
+          "url": "https://github.com/cloudflare/workerd",
+          "note": "open source"
+        }
+      ]
+    },
+    "workers-ai": {
+      "www": "workers-ai",
+      "cost": "Free: 10,000 Neurons/day · Workers Paid ($5/mo): then $0.011/1,000 Neurons · Some frontier models require Workers Paid or credits",
+      "alternatives": [
+        {
+          "name": "Amazon Bedrock",
+          "url": "https://aws.amazon.com/bedrock/",
+          "note": "AWS"
+        },
+        {
+          "name": "Together AI",
+          "url": "https://www.together.ai/"
+        },
+        {
+          "name": "Replicate",
+          "url": "https://replicate.com/"
+        },
+        {
+          "name": "Ollama",
+          "url": "https://ollama.com/",
+          "note": "self-hosted"
+        }
+      ]
+    },
+    "workers-observability": {
+      "name": "Workers Observability",
+      "group": "Developer platform",
+      "www": "workers-observability",
+      "docs": "https://developers.cloudflare.com/workers/observability/",
+      "pricing": "https://developers.cloudflare.com/workers/observability/logs/workers-logs/#pricing",
+      "cost": "Free: 200K log events/day, 3-day retention · Workers Paid: 20M events/mo incl., then $0.60/M events, 7-day retention",
+      "alternatives": [
+        {
+          "name": "Datadog",
+          "url": "https://www.datadoghq.com/"
+        },
+        {
+          "name": "Grafana Cloud",
+          "url": "https://grafana.com/products/cloud/"
+        },
+        {
+          "name": "Sentry",
+          "url": "https://sentry.io/"
+        },
+        {
+          "name": "SigNoz",
+          "url": "https://signoz.io/",
+          "note": "open source"
+        }
+      ]
+    },
+    "workflows": {
+      "www": "workflows",
+      "cost": "Free: 100K req/day, 3,000 steps/day, 1 GB · Workers Paid: 500K steps/mo then $0.80/100K, $0.20/GB-mo, plus Workers CPU/requests · Step and storage billing began Aug 10, 2026",
+      "alternatives": [
+        {
+          "name": "Temporal",
+          "url": "https://temporal.io/",
+          "note": "open source / cloud"
+        },
+        {
+          "name": "AWS Step Functions",
+          "url": "https://aws.amazon.com/step-functions/",
+          "note": "AWS"
+        },
+        {
+          "name": "Inngest",
+          "url": "https://www.inngest.com/"
+        },
+        {
+          "name": "Trigger.dev",
+          "url": "https://trigger.dev/",
+          "note": "open source"
+        }
+      ]
+    },
+    "zaraz": {
+      "www": "zaraz",
+      "pricing": "https://developers.cloudflare.com/zaraz/pricing-info/",
+      "cost": "Free: 1M Zaraz Events/mo (disabled above this unless Paid enabled) · Then $5/mo per additional 1M events",
+      "alternatives": [
+        {
+          "name": "Google Tag Manager server-side",
+          "url": "https://tagmanager.google.com/",
+          "note": "managed"
+        },
+        {
+          "name": "Segment",
+          "url": "https://segment.com/"
+        },
+        {
+          "name": "RudderStack",
+          "url": "https://www.rudderstack.com/",
+          "note": "open source"
+        },
+        {
+          "name": "Stape",
+          "url": "https://stape.io/",
+          "note": "managed sGTM"
+        }
+      ]
+    },
+    "privacy-gateway": {
+      "cost": "Enterprise only · Closed beta for select privacy-focused partners · Contact sales",
+      "alternatives": [
+        {
+          "name": "Fastly OHTTP Relay",
+          "url": "https://www.fastly.com/documentation/guides/integrations/other-integrations/oblivious-http-relay/",
+          "note": "managed relay"
+        },
+        {
+          "name": "Oblivious HTTP (ohttp-rs)",
+          "url": "https://github.com/martinthomson/ohttp",
+          "note": "open source"
+        },
+        {
+          "name": "Apple iCloud Private Relay",
+          "url": "https://support.apple.com/en-us/102602",
+          "note": "closest equivalent"
+        }
+      ]
+    },
+    "privacy-pass": {
+      "cost": "Not published",
+      "alternatives": [
+        {
+          "name": "Apple Private Access Tokens",
+          "url": "https://developer.apple.com/news/?id=huqjyh7k",
+          "note": "closest equivalent"
+        },
+        {
+          "name": "Google reCAPTCHA",
+          "url": "https://www.google.com/recaptcha/about/",
+          "note": "CAPTCHA alternative"
+        },
+        {
+          "name": "hCaptcha",
+          "url": "https://www.hcaptcha.com/",
+          "note": "CAPTCHA alternative"
+        },
+        {
+          "name": "privacypass (Go library)",
+          "url": "https://github.com/cloudflare/pat-go",
+          "note": "open source"
+        }
+      ]
+    },
+    "privacy-proxy": {
+      "cost": "Enterprise only · Managed service · Contact sales",
+      "alternatives": [
+        {
+          "name": "Apple iCloud Private Relay",
+          "url": "https://support.apple.com/en-us/102602",
+          "note": "closest equivalent"
+        },
+        {
+          "name": "Fastly Privacy Proxy",
+          "url": "https://www.fastly.com/",
+          "note": "MASQUE-based, contact vendor"
+        },
+        {
+          "name": "Mullvad VPN",
+          "url": "https://mullvad.net/",
+          "note": "consumer VPN"
+        },
+        {
+          "name": "MASQUE (RFC 9298) proxies",
+          "url": "https://github.com/masque-wg",
+          "note": "open source"
+        }
+      ]
+    },
+    "workers-vpc": {
+      "cost": "Free during open beta · Workers plan required, standard Workers pricing applies for requests and compute",
+      "alternatives": [
+        {
+          "name": "AWS PrivateLink",
+          "url": "https://aws.amazon.com/privatelink/",
+          "note": "AWS"
+        },
+        {
+          "name": "Tailscale",
+          "url": "https://tailscale.com/"
+        },
+        {
+          "name": "WireGuard",
+          "url": "https://www.wireguard.com/",
+          "note": "open source"
+        },
+        {
+          "name": "ngrok",
+          "url": "https://ngrok.com/",
+          "note": "closest equivalent"
+        }
+      ]
+    },
+    "agent-lee": {
+      "cost": "Beta · Available on Free plan and select Enterprise · No separate price published",
+      "alternatives": [
+        {
+          "name": "GitHub Copilot",
+          "url": "https://github.com/features/copilot",
+          "note": "closest equivalent"
+        },
+        {
+          "name": "Amazon Q",
+          "url": "https://aws.amazon.com/q/",
+          "note": "AWS console assistant"
+        },
+        {
+          "name": "Gemini Cloud Assist",
+          "url": "https://cloud.google.com/products/gemini/cloud-assist",
+          "note": "Google Cloud"
+        }
+      ]
+    },
+    "agent-memory": {
+      "cost": "Free during private beta · Not billed · 30 days notice before charging starts",
+      "alternatives": [
+        {
+          "name": "Mem0",
+          "url": "https://mem0.ai/",
+          "note": "open source + managed"
+        },
+        {
+          "name": "Zep",
+          "url": "https://www.getzep.com/",
+          "note": "managed"
+        },
+        {
+          "name": "Letta",
+          "url": "https://www.letta.com/",
+          "note": "open source"
+        }
+      ]
+    },
+    "ai": {
+      "skip": true,
+      "reason": "A hub page over Workers AI, AI Gateway, Vectorize and AI Search, which are listed on their own"
+    },
+    "basin-catalog": {
+      "cost": "Free monthly: 1M catalog ops, 10 GB + 1M objects compaction · Then $9/M ops, $0.005/GB, $2/M objects · Requires R2 and a payment card",
+      "alternatives": [
+        {
+          "name": "Apache Polaris",
+          "url": "https://polaris.apache.org/",
+          "note": "open source"
+        },
+        {
+          "name": "Project Nessie",
+          "url": "https://projectnessie.org/",
+          "note": "open source"
+        },
+        {
+          "name": "AWS Glue Data Catalog",
+          "url": "https://aws.amazon.com/glue/",
+          "note": "AWS"
+        },
+        {
+          "name": "Databricks Unity Catalog",
+          "url": "https://www.databricks.com/product/unity-catalog",
+          "note": "managed"
+        }
+      ]
+    },
+    "basin-pipelines": {
+      "cost": "Workers Paid · Free monthly: unlimited ingress, 50 GB transforms, 50 GB sinks · Then $0.04/GB transforms, $0.03/GB JSON, $0.06/GB Parquet/Iceberg",
+      "alternatives": [
+        {
+          "name": "Amazon Data Firehose",
+          "url": "https://aws.amazon.com/firehose/",
+          "note": "AWS"
+        },
+        {
+          "name": "Redpanda Connect",
+          "url": "https://www.redpanda.com/connect",
+          "note": "open source"
+        },
+        {
+          "name": "Vector",
+          "url": "https://vector.dev/",
+          "note": "open source"
+        },
+        {
+          "name": "Confluent",
+          "url": "https://www.confluent.io/",
+          "note": "managed"
+        }
+      ]
+    },
+    "basin-sql": {
+      "cost": "Free: 10 GB scanned/mo · Then $2.50/TB scanned (10 MB min per query) · Requires R2 and a payment card · R2 and Catalog charges extra",
+      "alternatives": [
+        {
+          "name": "Amazon Athena",
+          "url": "https://aws.amazon.com/athena/",
+          "note": "AWS"
+        },
+        {
+          "name": "Trino",
+          "url": "https://trino.io/",
+          "note": "open source"
+        },
+        {
+          "name": "DuckDB",
+          "url": "https://duckdb.org/",
+          "note": "open source"
+        },
+        {
+          "name": "Google BigQuery",
+          "url": "https://cloud.google.com/bigquery",
+          "note": "Google Cloud"
+        }
+      ]
+    },
+    "cf": {
+      "cost": "Beta · No CLI charge published · Resources it manages are billed at their own product rates",
+      "alternatives": [
+        {
+          "name": "AWS CLI",
+          "url": "https://aws.amazon.com/cli/",
+          "note": "AWS"
+        },
+        {
+          "name": "Google Cloud CLI",
+          "url": "https://cloud.google.com/sdk/gcloud",
+          "note": "Google Cloud"
+        },
+        {
+          "name": "Vercel CLI",
+          "url": "https://vercel.com/docs/cli",
+          "note": "Vercel"
+        },
+        {
+          "name": "Terraform",
+          "url": "https://www.terraform.io/",
+          "note": "infrastructure as code"
+        }
+      ]
+    },
+    "wallets": {
+      "cost": "Free to reserve a wallet handle (one per account) · Wallet access not guaranteed on release",
+      "alternatives": [
+        {
+          "name": "Coinbase x402",
+          "url": "https://www.x402.org/",
+          "note": "agent payments protocol"
+        },
+        {
+          "name": "Stripe",
+          "url": "https://stripe.com/",
+          "note": "agentic payments"
+        },
+        {
+          "name": "Skyfire",
+          "url": "https://skyfire.xyz/",
+          "note": "agent payments"
+        }
+      ]
+    },
+    "dynamic-workers": {
+      "cost": "Workers Paid ($5/mo) only · 1,000 unique Dynamic Workers/mo included, then $0.002 each per day · Requests and CPU at Workers rates",
+      "alternatives": [
+        {
+          "name": "E2B",
+          "url": "https://e2b.dev/",
+          "note": "sandboxes"
+        },
+        {
+          "name": "Deno Subhosting",
+          "url": "https://deno.com/subhosting",
+          "note": "managed"
+        },
+        {
+          "name": "Modal",
+          "url": "https://modal.com/",
+          "note": "sandboxes"
+        },
+        {
+          "name": "AWS Lambda",
+          "url": "https://aws.amazon.com/lambda/",
+          "note": "AWS"
+        }
+      ]
+    },
+    "flagship": {
+      "cost": "Not published",
+      "alternatives": [
+        {
+          "name": "LaunchDarkly",
+          "url": "https://launchdarkly.com/",
+          "note": "managed"
+        },
+        {
+          "name": "Unleash",
+          "url": "https://www.getunleash.io/",
+          "note": "open source"
+        },
+        {
+          "name": "GrowthBook",
+          "url": "https://www.growthbook.io/",
+          "note": "open source"
+        },
+        {
+          "name": "Flagsmith",
+          "url": "https://www.flagsmith.com/",
+          "note": "open source"
+        }
+      ]
+    },
+    "moq": {
+      "cost": "Free during beta",
+      "alternatives": [
+        {
+          "name": "LiveKit",
+          "url": "https://livekit.io/",
+          "note": "WebRTC, open source"
+        },
+        {
+          "name": "moq-rs",
+          "url": "https://github.com/kixelated/moq-rs",
+          "note": "open source MoQ"
+        },
+        {
+          "name": "Ant Media Server",
+          "url": "https://antmedia.io/",
+          "note": "self-hosted"
+        },
+        {
+          "name": "Amazon IVS",
+          "url": "https://aws.amazon.com/ivs/",
+          "note": "AWS"
+        }
+      ]
+    },
+    "web-analytics": {
+      "cost": "Free on all plans · Rules to limit where the snippet runs: Free 0, Pro 5, Business 20, Enterprise 100",
+      "alternatives": [
+        {
+          "name": "Plausible",
+          "url": "https://plausible.io/",
+          "note": "open source"
+        },
+        {
+          "name": "Umami",
+          "url": "https://umami.is/",
+          "note": "self-hosted"
+        },
+        {
+          "name": "Matomo",
+          "url": "https://matomo.org/",
+          "note": "self-hosted"
+        },
+        {
+          "name": "Google Analytics",
+          "url": "https://marketingplatform.google.com/about/analytics/"
+        }
+      ]
+    },
+    "google-tag-gateway": {
+      "cost": "Free to use · Requests through the gateway do not count toward billing for CDN, WAF or Bot Management",
+      "alternatives": [
+        {
+          "name": "Google Tag Manager server-side",
+          "url": "https://developers.google.com/tag-platform/tag-manager/server-side",
+          "note": "Google"
+        },
+        {
+          "name": "Stape",
+          "url": "https://stape.io/",
+          "note": "managed"
+        },
+        {
+          "name": "Fastly",
+          "url": "https://www.fastly.com/",
+          "note": "CDN"
+        }
+      ]
+    },
+    "health-checks": {
+      "cost": "Not on Free · Pro ($20/mo): 10 checks · Business ($200/mo): 50 · Enterprise: 1,000",
+      "alternatives": [
+        {
+          "name": "Amazon Route 53 Health Checks",
+          "url": "https://aws.amazon.com/route53/",
+          "note": "AWS"
+        },
+        {
+          "name": "UptimeRobot",
+          "url": "https://uptimerobot.com/"
+        },
+        {
+          "name": "Uptime Kuma",
+          "url": "https://uptime.kuma.pet/",
+          "note": "self-hosted"
+        },
+        {
+          "name": "Better Stack",
+          "url": "https://betterstack.com/"
+        }
+      ]
+    },
+    "smart-shield": {
+      "cost": "Free: base Smart Shield (Smart Tiered Cache, connection reuse) · Smart Shield + Argo from $5/mo · Smart Shield Advanced: Enterprise",
+      "alternatives": [
+        {
+          "name": "Amazon CloudFront Origin Shield",
+          "url": "https://aws.amazon.com/cloudfront/",
+          "note": "AWS"
+        },
+        {
+          "name": "Fastly Origin Shielding",
+          "url": "https://www.fastly.com/",
+          "note": "CDN"
+        },
+        {
+          "name": "Varnish Cache",
+          "url": "https://varnish-cache.org/",
+          "note": "open source"
+        }
+      ]
+    },
+    "cloudflare-challenges": {
+      "cost": "Not published · Docs state no plan or price · Challenge action is available in WAF custom rules on all plans",
+      "alternatives": [
+        {
+          "name": "hCaptcha",
+          "url": "https://www.hcaptcha.com/"
+        },
+        {
+          "name": "Google reCAPTCHA",
+          "url": "https://www.google.com/recaptcha/about/"
+        },
+        {
+          "name": "Altcha",
+          "url": "https://altcha.org/",
+          "note": "open source"
+        }
+      ]
+    },
+    "dmarc-management": {
+      "cost": "Free on all plans with Cloudflare DNS",
+      "alternatives": [
+        {
+          "name": "dmarcian",
+          "url": "https://dmarcian.com/"
+        },
+        {
+          "name": "Postmark DMARC Digests",
+          "url": "https://dmarcdigests.com/"
+        },
+        {
+          "name": "parsedmarc",
+          "url": "https://domainaware.github.io/parsedmarc/",
+          "note": "open source"
+        }
+      ]
+    },
+    "key-transparency": {
+      "cost": "Not published",
+      "alternatives": [
+        {
+          "name": "WhatsApp Key Transparency",
+          "url": "https://engineering.fb.com/2023/04/13/security/whatsapp-key-transparency/",
+          "note": "Meta"
+        },
+        {
+          "name": "Google Key Transparency",
+          "url": "https://github.com/google/keytransparency",
+          "note": "open source"
+        }
+      ]
+    },
+    "secrets-store": {
+      "cost": "Not published · Open beta · Limit of 100 secrets per account, one store",
+      "alternatives": [
+        {
+          "name": "HashiCorp Vault",
+          "url": "https://www.vaultproject.io/",
+          "note": "self-hosted"
+        },
+        {
+          "name": "AWS Secrets Manager",
+          "url": "https://aws.amazon.com/secrets-manager/",
+          "note": "AWS"
+        },
+        {
+          "name": "Doppler",
+          "url": "https://www.doppler.com/"
+        },
+        {
+          "name": "OpenBao",
+          "url": "https://openbao.org/",
+          "note": "open source"
+        }
+      ]
+    },
+    "security-center": {
+      "cost": "Free on all plans · Scans every 7 days (Free, Pro, Business) or 3 days (Enterprise) · Manual scans need a Business or Enterprise zone",
+      "alternatives": [
+        {
+          "name": "Qualys",
+          "url": "https://www.qualys.com/"
+        },
+        {
+          "name": "OWASP ZAP",
+          "url": "https://www.zaproxy.org/",
+          "note": "open source"
+        },
+        {
+          "name": "Tenable",
+          "url": "https://www.tenable.com/"
+        }
+      ]
+    },
+    "cloudflare-one": {
+      "cost": "Free for up to 50 users · Pay-as-you-go $7/user/mo (paid annually) · Contract plans custom price",
+      "alternatives": [
+        {
+          "name": "Zscaler",
+          "url": "https://www.zscaler.com/"
+        },
+        {
+          "name": "Tailscale",
+          "url": "https://tailscale.com/"
+        },
+        {
+          "name": "Netskope",
+          "url": "https://www.netskope.com/"
+        },
+        {
+          "name": "Pomerium",
+          "url": "https://www.pomerium.com/",
+          "note": "open source"
+        }
+      ]
+    },
+    "data-localization": {
+      "cost": "Enterprise only · Paid add-on · Contact sales",
+      "alternatives": [
+        {
+          "name": "AWS European Sovereign Cloud",
+          "url": "https://aws.amazon.com/compliance/europe-digital-sovereignty/"
+        },
+        {
+          "name": "Akamai",
+          "url": "https://www.akamai.com/"
+        },
+        {
+          "name": "Fastly",
+          "url": "https://www.fastly.com/"
+        }
+      ]
+    },
+    "multi-cloud-networking": {
+      "cost": "Enterprise only · Beta · Contact sales",
+      "alternatives": [
+        {
+          "name": "Aviatrix",
+          "url": "https://aviatrix.com/"
+        },
+        {
+          "name": "Megaport",
+          "url": "https://www.megaport.com/"
+        },
+        {
+          "name": "Tailscale",
+          "url": "https://tailscale.com/",
+          "note": "open core"
+        }
+      ]
+    },
+    "1.1.1.1": {
+      "cost": "Free · Available on all plans",
+      "alternatives": [
+        {
+          "name": "Quad9",
+          "url": "https://quad9.net/"
+        },
+        {
+          "name": "Google Public DNS",
+          "url": "https://developers.google.com/speed/public-dns"
+        },
+        {
+          "name": "NextDNS",
+          "url": "https://nextdns.io/"
+        },
+        {
+          "name": "Unbound",
+          "url": "https://nlnetlabs.nl/projects/unbound/about/",
+          "note": "self-hosted"
+        }
+      ]
+    },
+    "radar": {
+      "cost": "Free · Radar API free for non-commercial use (CC BY-NC 4.0)",
+      "alternatives": [
+        {
+          "name": "Internet Society Pulse",
+          "url": "https://pulse.internetsociety.org/"
+        },
+        {
+          "name": "RIPE Atlas",
+          "url": "https://atlas.ripe.net/"
+        },
+        {
+          "name": "IODA",
+          "url": "https://ioda.inetintel.cc.gatech.edu/",
+          "note": "open data"
+        }
+      ]
+    },
+    "warp-client": {
+      "cost": "Free · Consumer WARP on all plans · Org device policies need Cloudflare One (free up to 50 users, then $7/user/mo)",
+      "alternatives": [
+        {
+          "name": "Tailscale",
+          "url": "https://tailscale.com/"
+        },
+        {
+          "name": "WireGuard",
+          "url": "https://www.wireguard.com/",
+          "note": "open source"
+        },
+        {
+          "name": "Proton VPN",
+          "url": "https://protonvpn.com/"
+        }
+      ]
+    },
+    "ai-crawl-control": {
+      "cost": "Free · Available on all plans",
+      "alternatives": [
+        {
+          "name": "DataDome",
+          "url": "https://datadome.co/"
+        },
+        {
+          "name": "HUMAN Security",
+          "url": "https://www.humansecurity.com/"
+        },
+        {
+          "name": "Fastly Bot Management",
+          "url": "https://www.fastly.com/products/bot-management"
+        },
+        {
+          "name": "Dark Visitors",
+          "url": "https://darkvisitors.com/"
+        }
+      ]
+    },
+    "tunnel": {
+      "cost": "Free on all plans · No bandwidth fee for the tunnel · Zero Trust private access free up to 50 users, then $7/user/mo",
+      "alternatives": [
+        {
+          "name": "ngrok",
+          "url": "https://ngrok.com/"
+        },
+        {
+          "name": "Tailscale Funnel",
+          "url": "https://tailscale.com/kb/1223/funnel"
+        },
+        {
+          "name": "frp",
+          "url": "https://github.com/fatedier/frp",
+          "note": "open source"
+        },
+        {
+          "name": "Pangolin",
+          "url": "https://github.com/fosrl/pangolin",
+          "note": "self-hosted"
+        }
+      ]
+    },
+    "logs": {
+      "cost": "Logpush: 25 GB/mo free export, then $0.03/GB (R2) or $0.10/GB (external) · $0.04/GB transformed · Enterprise contract",
+      "alternatives": [
+        {
+          "name": "Fastly Log Streaming",
+          "url": "https://www.fastly.com/documentation/guides/integrations/logging/"
+        },
+        {
+          "name": "Vector",
+          "url": "https://vector.dev/",
+          "note": "open source"
+        },
+        {
+          "name": "Fluent Bit",
+          "url": "https://fluentbit.io/",
+          "note": "open source"
+        },
+        {
+          "name": "Datadog",
+          "url": "https://www.datadoghq.com/"
+        }
+      ]
+    },
+    "monetization-gateway": {
+      "cost": "Closed beta · Request access · Pricing not published",
+      "alternatives": [
+        {
+          "name": "Stripe",
+          "url": "https://stripe.com/"
+        },
+        {
+          "name": "Coinbase x402",
+          "url": "https://www.x402.org/",
+          "note": "open protocol"
+        },
+        {
+          "name": "Zuplo",
+          "url": "https://zuplo.com/"
+        },
+        {
+          "name": "Kong Konnect",
+          "url": "https://konghq.com/products/kong-konnect"
+        }
+      ]
+    },
+    "notifications": {
+      "cost": "Free on all plans · Email on Free · PagerDuty needs Business · Webhooks need Pro or higher",
+      "alternatives": [
+        {
+          "name": "PagerDuty",
+          "url": "https://www.pagerduty.com/",
+          "note": "closest equivalent"
+        },
+        {
+          "name": "Opsgenie",
+          "url": "https://www.atlassian.com/software/opsgenie",
+          "note": "closest equivalent"
+        },
+        {
+          "name": "Alertmanager",
+          "url": "https://prometheus.io/docs/alerting/latest/alertmanager/",
+          "note": "open source"
+        }
+      ]
+    },
+    "randomness-beacon": {
+      "cost": "Free · Public drand randomness beacon",
+      "alternatives": [
+        {
+          "name": "drand",
+          "url": "https://drand.love/",
+          "note": "open source"
+        },
+        {
+          "name": "NIST Randomness Beacon",
+          "url": "https://csrc.nist.gov/projects/interoperable-randomness-beacons"
+        },
+        {
+          "name": "random.org",
+          "url": "https://www.random.org/"
+        }
+      ]
+    },
+    "registrar": {
+      "cost": "At cost: registry fee + ICANN fee, no markup · Free WHOIS redaction and DNSSEC · Fees non-refundable",
+      "alternatives": [
+        {
+          "name": "Porkbun",
+          "url": "https://porkbun.com/"
+        },
+        {
+          "name": "Namecheap",
+          "url": "https://www.namecheap.com/"
+        },
+        {
+          "name": "Gandi",
+          "url": "https://www.gandi.net/"
+        },
+        {
+          "name": "Dynadot",
+          "url": "https://www.dynadot.com/"
+        }
+      ]
+    },
+    "resource-tagging": {
+      "cost": "Free · Available on all plans · Public beta",
+      "alternatives": [
+        {
+          "name": "AWS Resource Tagging",
+          "url": "https://aws.amazon.com/answers/account-management/aws-tagging-strategies/",
+          "note": "closest equivalent"
+        },
+        {
+          "name": "Google Cloud Labels",
+          "url": "https://cloud.google.com/resource-manager/docs/labels-overview",
+          "note": "closest equivalent"
+        },
+        {
+          "name": "Azure Tags",
+          "url": "https://learn.microsoft.com/azure/azure-resource-manager/management/tag-resources",
+          "note": "closest equivalent"
+        }
+      ]
+    },
+    "rules": {
+      "cost": "Free · Available on all plans · Domain must be proxied through Cloudflare",
+      "alternatives": [
+        {
+          "name": "Fastly VCL",
+          "url": "https://www.fastly.com/documentation/guides/vcl/"
+        },
+        {
+          "name": "Nginx",
+          "url": "https://nginx.org/",
+          "note": "open source"
+        },
+        {
+          "name": "Caddy",
+          "url": "https://caddyserver.com/",
+          "note": "open source"
+        },
+        {
+          "name": "AWS CloudFront Functions",
+          "url": "https://aws.amazon.com/cloudfront/"
+        }
+      ]
+    },
+    "tenant": {
+      "cost": "Partners only · Tenant API for Channel and Alliance partners · Pricing not published",
+      "alternatives": [
+        {
+          "name": "AWS Organizations",
+          "url": "https://aws.amazon.com/organizations/",
+          "note": "closest equivalent"
+        },
+        {
+          "name": "Google Cloud Resource Manager",
+          "url": "https://cloud.google.com/resource-manager",
+          "note": "closest equivalent"
+        },
+        {
+          "name": "Azure Lighthouse",
+          "url": "https://azure.microsoft.com/products/azure-lighthouse",
+          "note": "closest equivalent"
+        }
+      ]
+    },
+    "time-services": {
+      "cost": "Free · NTP, NTS and Roughtime over the Cloudflare network",
+      "alternatives": [
+        {
+          "name": "NTP Pool Project",
+          "url": "https://www.ntppool.org/"
+        },
+        {
+          "name": "Google Public NTP",
+          "url": "https://developers.google.com/time"
+        },
+        {
+          "name": "Chrony",
+          "url": "https://chrony-project.org/",
+          "note": "open source"
+        }
+      ]
+    },
+    "version-management": {
+      "cost": "Enterprise only · Contact sales",
+      "alternatives": [
+        {
+          "name": "Terraform",
+          "url": "https://www.terraform.io/",
+          "note": "closest equivalent"
+        },
+        {
+          "name": "OpenTofu",
+          "url": "https://opentofu.org/",
+          "note": "open source"
+        },
+        {
+          "name": "Pulumi",
+          "url": "https://www.pulumi.com/",
+          "note": "closest equivalent"
+        }
+      ]
+    },
+    "byoip": {
+      "cost": "Enterprise only · Contact sales",
+      "alternatives": [
+        {
+          "name": "Akamai",
+          "url": "https://www.akamai.com/"
+        },
+        {
+          "name": "Fastly",
+          "url": "https://www.fastly.com/"
+        },
+        {
+          "name": "AWS BYOIP",
+          "url": "https://aws.amazon.com/vpc/",
+          "note": "closest equivalent"
+        }
+      ]
+    },
+    "network-error-logging": {
+      "cost": "Free · Available on all plans · Free/Pro self-serve, Business/Enterprise via support",
+      "alternatives": [
+        {
+          "name": "Datadog Synthetic Monitoring",
+          "url": "https://www.datadoghq.com/product/synthetic-monitoring/"
+        },
+        {
+          "name": "ThousandEyes",
+          "url": "https://www.thousandeyes.com/"
+        },
+        {
+          "name": "NEL collector (Report URI)",
+          "url": "https://report-uri.com/"
+        }
+      ]
+    }
+  }
+}

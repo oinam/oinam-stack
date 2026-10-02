@@ -67,20 +67,28 @@ GitHub Pages serves the files; Cloudflare holds the DNS for `oinam.com`.
 2. Settings → Pages → Build and deployment → **Deploy from a branch**, `main` / `/ (root)`.
 3. Custom domain: `stack.oinam.com`. The `CNAME` file in the root keeps this setting from
    being reset on deploy.
-4. Once the certificate is issued, tick **Enforce HTTPS**.
+4. Once the certificate is issued, tick **Enforce HTTPS**. (Done.)
 
 `.nojekyll` tells Pages to serve the files as they are, without running Jekyll.
 
 ### Cloudflare DNS (`oinam.com` zone)
 
-| Type  | Name    | Target            | Proxy                 |
-| ----- | ------- | ----------------- | --------------------- |
-| CNAME | `stack` | `oinam.github.io` | DNS only (grey cloud) |
+| Type  | Name    | Target            | Proxy               |
+| ----- | ------- | ----------------- | ------------------- |
+| CNAME | `stack` | `oinam.github.io` | Proxied (orange)    |
 
-- Start **DNS only**. GitHub has to see its own servers behind the name to verify the domain and
-  issue the certificate; a proxied (orange) record first is the usual reason that fails.
-- After **Enforce HTTPS** is on, the record can be flipped to **Proxied**, with SSL/TLS set to
-  **Full (strict)** — never Flexible, which loops redirects against Pages.
+SSL/TLS for the `oinam.com` zone is **Full (strict)**. Live since 2026-10-02.
+
+How it was turned on, and what to do if it breaks:
+
+- The record started **DNS only** (grey), so GitHub could see its own servers behind the name,
+  verify the domain, and issue the certificate. Proxying first is the usual reason that fails.
+- Then **Enforce HTTPS** on GitHub, and only then the orange cloud.
+- Never **Flexible**: Cloudflare would fetch over HTTP, GitHub would answer "go to HTTPS", and
+  every page loops on its own 301. That happened for a few minutes on 2026-10-02.
+- GitHub renews its Let's Encrypt certificate itself (the first one expires 2026-12-31). Behind
+  the proxy a renewal can fail, and Full (strict) then shows a 526. If it does, set the record to
+  DNS only for a day so GitHub can renew, then back to Proxied.
 - If `oinam.com` is a verified domain on the `oinam` organisation, GitHub may ask for a
   `_github-pages-challenge-oinam` TXT record; add it from the value GitHub shows.
 

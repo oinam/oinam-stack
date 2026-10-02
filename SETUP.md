@@ -11,7 +11,8 @@ alternatives if we have to move, and cost.
 
 ### Build
 
-`cloudflare/index.html` is generated locally and committed; GitHub Pages serves it as it is. Node 22, no
+`cloudflare/index.html`, and its Markdown twin `cloudflare.md` for AI tools, are generated locally
+and committed; GitHub Pages serves them as they are. `llms.txt` at the root lists the Markdown pages. Node 22, no
 dependencies.
 
 ```sh
@@ -34,6 +35,8 @@ that has gone, or one missing a cost or alternatives. Add it to `data/cloudflare
 
 - `tools/cloudflare.mjs` — fetch, parse, merge, render.
 - `tools/cloudflare.html` — the page around the table. Edit this, not `cloudflare/index.html`.
+- `cloudflare.md` — the same matrix as Markdown, generated with the page. Never edit it by hand.
+- `llms.txt` — by hand; add a line when a new page lands.
 - `data/cloudflare.json` — which product page goes with which docs entry, products that only have a
   product page (Access, Gateway, Cache Reserve…), what is left out and why, and every Cost and
   Alternatives entry.

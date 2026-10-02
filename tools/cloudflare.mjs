@@ -228,6 +228,7 @@ async function render(groups, total, today, checked, skipped) {
     .map(([g, ps]) => link('#' + g.toLowerCase().replace(/[^a-z0-9]+/g, '-'), `${text(g)} <span class="count">${ps.length}</span>`))
     .join('\n          ');
   const slots = {
+    page: 'Cloudflare',
     total: String(total),
     date: today,
     checked,
@@ -245,6 +246,8 @@ function renderMarkdown(groups, total, today, checked, skipped) {
   const md = (label, url) => `[${cell(label)}](${url})`;
   const out = [
     '# Cloudflare',
+    '',
+    `[Home](${SITE}/) › Cloudflare`,
     '',
     `> All ${total} Cloudflare products: what each does, what it costs, and where we would go if we had to move.`,
     '',

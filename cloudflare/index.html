@@ -60,14 +60,31 @@
 
     header {
       max-width: 42rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
 
+    /* The title is a breadcrumb back to the Stack home: Home › Page. */
     h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
       font-weight: 700;
       letter-spacing: -0.02em;
-      line-height: 1.1;
+      line-height: 1.2;
+    }
+
+    h1 a {
+      color: var(--muted);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    h1 a:hover {
+      color: var(--accent);
+    }
+
+    h1 .sep {
+      color: var(--muted);
+      font-weight: 400;
+      margin: 0 0.35em;
     }
 
     a {
@@ -306,7 +323,7 @@
 <body>
   <main>
     <header>
-      <h1>Cloudflare</h1>
+      <h1><a href="../">Home</a><span class="sep" aria-hidden="true">›</span><span aria-current="page">Cloudflare</span></h1>
     </header>
 
     <div class="tools">

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oinam · Cloudflare</title>
+  <meta name="description" content="Cloudflare at Oinam.">
+  <style>
+    /* Light theme by default; dark follows the system, no switch. */
+    :root {
+      --bg: oklch(100% 0 0);
+      --text: oklch(18% 0 0);
+      --muted: oklch(50% 0 0);
+      --border: oklch(92% 0 0);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: oklch(8% 0 0);
+        --text: oklch(96% 0 0);
+        --muted: oklch(70% 0 0);
+        --border: oklch(22% 0 0);
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    main {
+      width: 96%;
+      max-width: 42rem;
+      padding: 2rem 0;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: normal;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.125rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+
+    a {
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Cloudflare</h1>
+    <p>Oinam’s notes and experiments on Cloudflare. Coming soon.</p>
+    <footer>
+      <a href="https://oinam.com">oinam.com</a>
+    </footer>
+  </main>
+</body>
+</html>

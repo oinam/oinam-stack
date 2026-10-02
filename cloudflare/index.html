@@ -134,9 +134,14 @@
       margin-bottom: 0.75rem;
     }
 
+    /* Separate borders, so the thin outline can round its corners. */
     table {
       width: 100%;
-      border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 0;
+      border: 1px solid var(--border);
+      border-radius: 0.375rem;
+      overflow: hidden;
       font-size: 0.9375rem;
     }
 
@@ -165,6 +170,10 @@
       vertical-align: top;
       padding: 0.75rem;
       border-bottom: 1px solid var(--border);
+    }
+
+    tbody tr:last-child > * {
+      border-bottom: 0;
     }
 
     tbody th {
@@ -265,6 +274,10 @@
       tbody tr {
         padding: 1rem 0.75rem;
         border-bottom: 1px solid var(--border);
+      }
+
+      tbody tr:last-child {
+        border-bottom: 0;
       }
 
       tbody th,

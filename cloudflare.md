@@ -2,7 +2,7 @@
 
 > All 108 Cloudflare products: what each does, what it costs, and where we would go if we had to move.
 
-HTML version: https://stack.oinam.com/cloudflare/ · Parsed from developers.cloudflare.com and cloudflare.com on 2026-10-02.
+HTML version: https://stack.oinam.com/cloudflare/ · Parsed from developers.cloudflare.com and cloudflare.com on 2026-10-02; costs and alternatives checked by hand on 2026-10-02.
 
 ## Developer platform
 

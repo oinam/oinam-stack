@@ -1,0 +1,74 @@
+# Rebuild the Cloudflare matrix from the docs and cloudflare.com, every Monday and on demand.
+#
+# - Commits only when something other than the "Parsed on" date changed, so a quiet week leaves
+#   no commit behind. The push redeploys GitHub Pages.
+# - Cost and Alternatives are hand-written in data/cloudflare.json and are never touched here.
+#   Anything that needs curating (a new product, one gone, one missing a cost) goes into a single
+#   open issue, "Cloudflare: products to curate", which is updated each run and closed once clear.
+# - If any fetch fails, tools/cloudflare.mjs stops without writing, this run fails, and the page
+#   stays as it was.
+
+name: Refresh Cloudflare matrix
+
+on:
+  schedule:
+    - cron: '17 3 * * 1' # Mondays, 03:17 UTC (08:47 IST)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build from fresh fetches
+        run: node tools/cloudflare.mjs --refresh --warnings="$RUNNER_TEMP/warnings.md"
+
+      - name: Commit if the matrix changed
+        run: |
+          if git diff --quiet -I 'Parsed (on|from) ' -- cloudflare/index.html cloudflare.md; then
+            echo "Nothing new beyond the date; no commit."
+            git checkout -- cloudflare/index.html cloudflare.md
+            exit 0
+          fi
+          git config user.name "Brajeshwar Oinam"
+          git config user.email "brajeshwar@oinam.com"
+          git add cloudflare/index.html cloudflare.md
+          git commit -m "Cloudflare matrix, refreshed $(date -u +%Y-%m-%d)"
+          git push
+
+      - name: Open, update, or close the curation issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Cloudflare: products to curate"
+          number=$(gh issue list --state open --search "in:title \"$title\"" --json number --jq '.[0].number // empty')
+          if [ -s "$RUNNER_TEMP/warnings.md" ]; then
+            {
+              echo "The weekly refresh found these. Add or fix them in \`data/cloudflare.json\` (Cost and Alternatives from Cloudflare's own pricing pages), then run \`node tools/cloudflare.mjs\`."
+              echo
+              cat "$RUNNER_TEMP/warnings.md"
+              echo
+              echo "_Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}_"
+            } > "$RUNNER_TEMP/body.md"
+            if [ -n "$number" ]; then
+              gh issue edit "$number" --body-file "$RUNNER_TEMP/body.md"
+            else
+              gh issue create --title "$title" --body-file "$RUNNER_TEMP/body.md"
+            fi
+          elif [ -n "$number" ]; then
+            gh issue close "$number" --comment "Nothing left to curate as of $(date -u +%Y-%m-%d)."
+          fi

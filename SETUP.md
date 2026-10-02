@@ -41,6 +41,22 @@ that has gone, or one missing a cost or alternatives. Add it to `data/cloudflare
   product page (Access, Gateway, Cache Reserve…), what is left out and why, and every Cost and
   Alternatives entry.
 
+### Weekly refresh
+
+[`.github/workflows/refresh.yml`](.github/workflows/refresh.yml) runs the build with `--refresh`
+every Monday at 03:17 UTC, and on demand from the Actions tab (**Run workflow**). Free: the repo
+is public, and a run takes well under a minute.
+
+- It commits, as Brajeshwar Oinam, only when the matrix changed beyond its "Parsed on" date; the
+  push redeploys Pages.
+- Cost and Alternatives are never touched by it. What needs curating goes into one open issue,
+  **Cloudflare: products to curate**, updated each run and closed when nothing is left.
+- If a fetch fails (cloudflare.com can block a datacenter), the build stops without writing and
+  the run fails, so a half-fetched page never replaces a good one.
+- After re-checking costs by hand, set `checked` at the top of `data/cloudflare.json` to that day.
+- GitHub turns off scheduled workflows in a public repo after 60 days with no activity; if it
+  happens, re-enable it from the Actions tab.
+
 ## Hosting
 
 GitHub Pages serves the files; Cloudflare holds the DNS for `oinam.com`.

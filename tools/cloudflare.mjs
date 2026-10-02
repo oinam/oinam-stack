@@ -3,6 +3,10 @@
 //
 //   node tools/cloudflare.mjs            use the cache in .cache/ where it exists
 //   node tools/cloudflare.mjs --refresh  fetch everything again
+//   --warnings=<file>                    also write the to-look-at list there, as Markdown
+//
+// If any fetch fails, it stops before writing anything: a blocked or half-fetched run must never
+// replace a good page. The scheduled GitHub Action (.github/workflows/refresh.yml) relies on that.
 //
 // What is parsed, and from where:
 //   - developers.cloudflare.com/llms.txt   every product, its category, docs link, one-line description
@@ -28,6 +32,8 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CACHE = join(ROOT, '.cache');
 const REFRESH = process.argv.includes('--refresh');
+const WARNINGS = process.argv.find((a) => a.startsWith('--warnings='))?.slice('--warnings='.length);
+let failures = 0;
 const DOCS = 'https://developers.cloudflare.com';
 const WWW = 'https://www.cloudflare.com';
 const SITE = 'https://stack.oinam.com';
@@ -53,6 +59,7 @@ async function get(url) {
     } catch (err) {
       if (attempt === 3) {
         console.warn(`! ${url}: ${err.message}`);
+        failures++;
         return '';
       }
       await new Promise((r) => setTimeout(r, 500 * attempt));
@@ -215,7 +222,7 @@ function renderGroup(group, products) {
       </section>`;
 }
 
-async function render(groups, total, today, skipped) {
+async function render(groups, total, today, checked, skipped) {
   const template = await readFile(join(ROOT, 'tools', 'cloudflare.html'), 'utf8');
   const nav = groups
     .map(([g, ps]) => link('#' + g.toLowerCase().replace(/[^a-z0-9]+/g, '-'), `${text(g)} <span class="count">${ps.length}</span>`))
@@ -223,6 +230,7 @@ async function render(groups, total, today, skipped) {
   const slots = {
     total: String(total),
     date: today,
+    checked,
     nav,
     groups: groups.map(([g, ps]) => renderGroup(g, ps)).join('\n'),
     skipped: skipped.map((s) => `<li>${link(s.docs, text(s.name))} — ${text(s.reason)}</li>`).join('\n        '),
@@ -232,7 +240,7 @@ async function render(groups, total, today, skipped) {
 }
 
 // The same matrix as Markdown, for AI tools and anything else that reads text.
-function renderMarkdown(groups, total, today, skipped) {
+function renderMarkdown(groups, total, today, checked, skipped) {
   const cell = (s = '') => smart(s).replace(/\|/g, '\\|').replace(/\s*\n\s*/g, ' ');
   const md = (label, url) => `[${cell(label)}](${url})`;
   const out = [
@@ -240,7 +248,7 @@ function renderMarkdown(groups, total, today, skipped) {
     '',
     `> All ${total} Cloudflare products: what each does, what it costs, and where we would go if we had to move.`,
     '',
-    `HTML version: ${SITE}/cloudflare/ · Parsed from developers.cloudflare.com and cloudflare.com on ${today}.`,
+    `HTML version: ${SITE}/cloudflare/ · Parsed from developers.cloudflare.com and cloudflare.com on ${today}; costs and alternatives checked by hand on ${checked}.`,
     '',
   ];
   for (const [group, ps] of groups) {
@@ -364,12 +372,19 @@ const groups = [...byGroup.entries()]
   })
   .map(([g, ps]) => [g, ps.sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }))]);
 
+if (failures || directory.length < 50 || sitemap.length < 30) {
+  console.error(`\nStopped without writing: ${failures} failed fetches, ${directory.length} docs entries, ${sitemap.length} product pages.`);
+  process.exit(1);
+}
+
 const today = new Date().toISOString().slice(0, 10);
-await writeFile(join(ROOT, 'cloudflare', 'index.html'), await render(groups, products.length, today, skipped));
-await writeFile(join(ROOT, 'cloudflare.md'), renderMarkdown(groups, products.length, today, skipped));
+const checked = curated.checked || today;
+await writeFile(join(ROOT, 'cloudflare', 'index.html'), await render(groups, products.length, today, checked, skipped));
+await writeFile(join(ROOT, 'cloudflare.md'), renderMarkdown(groups, products.length, today, checked, skipped));
 console.log(`wrote cloudflare/index.html and cloudflare.md: ${products.length} products in ${groups.length} groups`);
 
 if (warnings.length) {
   console.log(`\n${warnings.length} to look at:`);
   for (const w of warnings) console.log('  - ' + w);
 }
+if (WARNINGS) await writeFile(WARNINGS, warnings.map((w) => `- ${w}`).join('\n') + (warnings.length ? '\n' : ''));

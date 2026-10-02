@@ -1104,6 +1104,21 @@
   <script>
     // Filter rows as you type; hide a category when none of its rows match.
     const input = document.getElementById('filter');
+
+    // ⌘K on a Mac, Ctrl+K elsewhere, jumps to the filter; Escape clears it and steps out.
+    const mac = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
+    input.placeholder += mac ? '  ⌘K' : '  Ctrl+K';
+    document.addEventListener('keydown', (e) => {
+      if (e.key.toLowerCase() === 'k' && (mac ? e.metaKey : e.ctrlKey) && !e.altKey && !e.shiftKey) {
+        e.preventDefault();
+        input.focus();
+        input.select();
+      } else if (e.key === 'Escape' && document.activeElement === input) {
+        input.value = '';
+        input.dispatchEvent(new Event('input'));
+        input.blur();
+      }
+    });
     const sections = [...document.querySelectorAll('main section')];
     const empty = document.getElementById('empty');
     input.addEventListener('input', () => {

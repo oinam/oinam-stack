@@ -1,5 +1,5 @@
 {
-  "checked": "2026-10-02",
+  "checked": "2026-11-06",
   "groupOrder": [
     "Developer platform",
     "Application performance",
@@ -948,7 +948,7 @@
       "group": "Application performance",
       "www": "keyless-ssl",
       "docs": "https://developers.cloudflare.com/ssl/keyless-ssl/",
-      "cost": "Enterprise add-on · Contact sales · You supply your own CA certificate; TLS 1.3 not supported",
+      "cost": "Enterprise add-on · Contact sales · You supply your own CA certificate · TLS 1.3 with ECDSA certificates only (RSA up to TLS 1.2)",
       "alternatives": [
         {
           "name": "AWS CloudHSM",
@@ -1279,7 +1279,7 @@
         "realtime",
         "turn-sfu"
       ],
-      "cost": "10K participant min/mo included, then A/V $0.002/min, audio-only $0.0005/min · 100 export min/mo included, then $0.010/min · Transcription at Workers AI rates",
+      "cost": "SFU and TURN: 1,000 GB/mo egress free, then $0.05/GB · RealtimeKit: 10K participant min/mo included, then A/V $0.002/min, audio-only $0.0005/min · 100 export min/mo included, then $0.010/min · Transcription at Workers AI rates",
       "alternatives": [
         {
           "name": "LiveKit",
@@ -1406,7 +1406,7 @@
     },
     "stream": {
       "www": "stream",
-      "cost": "No free tier · Storage $5/mo per 1,000 min stored (prepaid) · Delivery $1 per 1,000 min · Free ingress and encoding, no egress fees",
+      "cost": "No free tier on its own · Pro and Business zones include 100 min stored + 10K min delivered · Storage $5/mo per 1,000 min (prepaid) · Delivery $1 per 1,000 min · Free ingress and encoding, no egress fees",
       "alternatives": [
         {
           "name": "Mux",
@@ -2179,7 +2179,7 @@
       ]
     },
     "security-center": {
-      "cost": "Free on all plans · Scans every 7 days (Free, Pro, Business) or 3 days (Enterprise) · Manual scans need a Business or Enterprise zone",
+      "cost": "Free on all plans · Scans every 7 days (Free), 3 days (Pro, Business), or daily (Enterprise) · Manual scans on all plans",
       "alternatives": [
         {
           "name": "Qualys",
@@ -2333,7 +2333,7 @@
       ]
     },
     "tunnel": {
-      "cost": "Free on all plans · No bandwidth fee for the tunnel · Zero Trust private access free up to 50 users, then $7/user/mo",
+      "cost": "Free on all plans · 1,000 tunnels per account included, then $4.50/tunnel/mo · Zero Trust private access free up to 50 users, then $7/user/mo",
       "alternatives": [
         {
           "name": "ngrok",
@@ -2401,7 +2401,7 @@
       ]
     },
     "notifications": {
-      "cost": "Free on all plans · Email on Free · PagerDuty needs Business · Webhooks need Pro or higher",
+      "cost": "Free on all plans · Email and webhooks on all plans (up to 100 webhooks without a paid zone) · PagerDuty needs Business",
       "alternatives": [
         {
           "name": "PagerDuty",

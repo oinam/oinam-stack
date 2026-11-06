@@ -104,7 +104,7 @@
     },
     "ai-gateway": {
       "www": "ai-gateway",
-      "cost": "Free on all plans (analytics, caching, rate limiting) · Logpush needs Workers Paid: 10M req/mo, +$0.05/M · Unified Billing credits +5% fee",
+      "cost": "Free on all plans (analytics, caching, rate limiting, DLP) · Logs at Workers Logs rates (gateways since Sep 24, 2026) · Logpush at Logpush rates · Unified Billing credits +5% fee",
       "alternatives": [
         {
           "name": "LiteLLM",
@@ -131,7 +131,7 @@
     "ai-search": {
       "www": "ai-search",
       "pricing": "https://developers.cloudflare.com/ai-search/platform/limits-pricing/",
-      "cost": "Free monthly: 5M ingestion tokens, 10 GB-mo, 1K semantic + 1K full-text queries · Then $0.75/M tokens, $2/GB-mo, $0.75/1K queries · Billing from Nov 1, 2026",
+      "cost": "Free monthly: 5M ingestion tokens, 10 GB-mo, 1K semantic + 1K full-text queries · Then $0.75/M tokens, $2/GB-mo, $0.75/1K semantic, $0.10/1K full-text queries · Billing from Dec 1, 2026",
       "alternatives": [
         {
           "name": "Amazon Bedrock Knowledge Bases",
@@ -255,7 +255,7 @@
     },
     "artifacts": {
       "www": "artifacts",
-      "cost": "Workers Paid ($5/mo) only · 10K ops + 1 GB included · Then $0.15/1K ops, $0.50/GB-mo · Billing starts Oct 14, 2026",
+      "cost": "Workers Paid ($5/mo) only · 10K ops + 1 GB included · Then $0.15/1K ops, $0.50/GB-mo · Billing starts Nov 12, 2026",
       "alternatives": [
         {
           "name": "GitHub",
@@ -384,7 +384,7 @@
       ]
     },
     "browser-run": {
-      "www": "browser-rendering",
+      "www": "browser-run",
       "cost": "Free: 10 min/day, 3 concurrent browsers · Paid: 10 hrs/mo then $0.09/hr, 10 browsers then $2/browser · Quick Actions bill browser hours only",
       "alternatives": [
         {
@@ -574,7 +574,7 @@
     },
     "containers": {
       "www": "containers",
-      "cost": "Workers Paid ($5/mo) required · Included: 25 GiB-hr, 375 vCPU-min, 200 GB-hr · Then $0.000020/vCPU-s, $0.0000025/GiB-s · Egress from $0.025/GB, 1 TB incl.",
+      "cost": "Workers Paid ($5/mo) required · Included: 25 GiB-hr, 375 vCPU-min, 200 GB-hr disk · Then $0.000020/vCPU-s, $0.0000025/GiB-s, $0.00000007/GB-s · Egress from $0.025/GB, 1 TB incl.",
       "alternatives": [
         {
           "name": "AWS Fargate",
@@ -919,7 +919,7 @@
     },
     "k2": {
       "www": "k2",
-      "cost": "Public beta · Workers Paid ($5/mo) required · 10 GB storage cap per account · No usage rates published",
+      "cost": "Public beta, not billed yet · Workers Paid ($5/mo) required · Planned: $0.04/GB produced, $0.04/GB consumed, $0.02/GB-mo retained · 10 GB storage cap per account",
       "alternatives": [
         {
           "name": "Apache Kafka",
@@ -1022,9 +1022,9 @@
         }
       ]
     },
-    "log-explorer": {
+    "observability": {
       "www": "log-explorer",
-      "cost": "Paid add-on to Application Services or Zero Trust · Billed per GB ingested and stored · No free tier or trial",
+      "cost": "From Dec 1, 2026, logs and traces share one allowance · Free: 0.5 GB/day ingested, 7-day retention · Paid: 50 GB + 10 GB-mo incl., then $0.25/GB, $0.10/GB-mo · Log Explorer (legacy) $1/GB, 30-day retention",
       "alternatives": [
         {
           "name": "Datadog",
@@ -1279,7 +1279,7 @@
         "realtime",
         "turn-sfu"
       ],
-      "cost": "A/V participant $0.002/min · Audio-only $0.0005/min · Recording/RTMP/HLS export $0.010/min · Transcription at Workers AI rates",
+      "cost": "10K participant min/mo included, then A/V $0.002/min, audio-only $0.0005/min · 100 export min/mo included, then $0.010/min · Transcription at Workers AI rates",
       "alternatives": [
         {
           "name": "LiveKit",
@@ -1611,7 +1611,7 @@
       "www": "workers-observability",
       "docs": "https://developers.cloudflare.com/workers/observability/",
       "pricing": "https://developers.cloudflare.com/workers/observability/logs/workers-logs/#pricing",
-      "cost": "Free: 200K log events/day, 3-day retention · Workers Paid: 20M events/mo incl., then $0.60/M events, 7-day retention",
+      "cost": "Free: 200K log events/day, 3-day retention · Workers Paid: 20M events/mo incl., then $0.60/M events, 7-day retention · From Dec 1, 2026: Cloudflare Observability pricing",
       "alternatives": [
         {
           "name": "Datadog",
@@ -1683,8 +1683,8 @@
         }
       ]
     },
-    "privacy-gateway": {
-      "cost": "Enterprise only · Closed beta for select privacy-focused partners · Contact sales",
+    "ohttp-relay": {
+      "cost": "Enterprise only · Closed beta for select privacy-oriented partners · Contact sales",
       "alternatives": [
         {
           "name": "Fastly OHTTP Relay",
@@ -2592,6 +2592,29 @@
         {
           "name": "NEL collector (Report URI)",
           "url": "https://report-uri.com/"
+        }
+      ]
+    },
+    "web-search": {
+      "pricing": "https://developers.cloudflare.com/web-search/providers/",
+      "cost": "Open beta · Billed at each provider’s list price, no markup: Ceramic.ai $0.25, Linkup $5, Exa $7 per 1K requests · Pay with AI Gateway credits or bring your own key",
+      "alternatives": [
+        {
+          "name": "Exa",
+          "url": "https://exa.ai/"
+        },
+        {
+          "name": "Tavily",
+          "url": "https://www.tavily.com/"
+        },
+        {
+          "name": "Brave Search API",
+          "url": "https://brave.com/search/api/"
+        },
+        {
+          "name": "SearXNG",
+          "url": "https://docs.searxng.org/",
+          "note": "open source"
         }
       ]
     }

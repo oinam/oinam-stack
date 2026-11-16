@@ -2,9 +2,9 @@
 
 [Home](https://stack.oinam.com/) › Cloudflare
 
-> All 109 Cloudflare products: what each does, what it costs, and where we would go if we had to move.
+> All 108 Cloudflare products: what each does, what it costs, and where we would go if we had to move.
 
-HTML version: https://stack.oinam.com/cloudflare/ · Parsed from developers.cloudflare.com and cloudflare.com on 2026-11-06; costs and alternatives checked by hand on 2026-11-06.
+HTML version: https://stack.oinam.com/cloudflare/ · Parsed from developers.cloudflare.com and cloudflare.com on 2026-11-16; costs and alternatives checked by hand on 2026-11-06.
 
 ## Developer platform
 
@@ -130,7 +130,6 @@ HTML version: https://stack.oinam.com/cloudflare/ · Parsed from developers.clou
 | [Data Loss Prevention](https://www.cloudflare.com/products/dlp/) | Cloudflare DLP safeguards sensitive data by inspecting traffic, files, and email content to identify and block sensitive data, reducing data exposure and compliance risks. · [Docs](https://developers.cloudflare.com/cloudflare-one/data-loss-prevention/) · [Product page](https://www.cloudflare.com/products/dlp/) | [Netskope](https://www.netskope.com/); [Microsoft Purview](https://www.microsoft.com/security/business/microsoft-purview); [Nightfall](https://nightfall.ai/) | Free: limited predefined profiles on Free and Pay-as-you-go · Full DLP is an Enterprise add-on · Price not published · [Plans](https://www.cloudflare.com/sase/products/access/) |
 | [Email Security](https://www.cloudflare.com/products/email-security/) | Prevent phishing, malware, and business email compromise with Cloudflare Email Security, providing advanced AI-driven protection for your organization. · [Docs](https://developers.cloudflare.com/cloudflare-one/email-security/) · [Product page](https://www.cloudflare.com/products/email-security/) | [Proofpoint](https://www.proofpoint.com/); [Mimecast](https://www.mimecast.com/); [Abnormal Security](https://abnormal.ai/); [Rspamd](https://rspamd.com/) (open source) | Paid add-on · Contact sales · Free Retro Scan for Microsoft 365 · Not in Free plan · [Plans](https://www.cloudflare.com/sase/products/access/) |
 | [Gateway](https://www.cloudflare.com/products/gateway/) |  · [Docs](https://developers.cloudflare.com/cloudflare-one/traffic-policies/) · [Product page](https://www.cloudflare.com/products/gateway/) | [Zscaler Internet Access](https://www.zscaler.com/products-and-solutions/zscaler-internet-access); [NextDNS](https://nextdns.io/); [Cisco Umbrella](https://umbrella.cisco.com/); [Pi-hole](https://pi-hole.net/) (self-hosted) | Free for up to 50 users · Pay-as-you-go $7/user/mo (paid annually) · Contract plans custom price · [Plans](https://www.cloudflare.com/sase/products/access/) |
-| [Multi-Cloud Networking](https://developers.cloudflare.com/multi-cloud-networking/) | Automate resource discovery and simplify managing your public cloud infrastructure · [Docs](https://developers.cloudflare.com/multi-cloud-networking/) | [Aviatrix](https://aviatrix.com/); [Megaport](https://www.megaport.com/); [Tailscale](https://tailscale.com/) (open core) | Enterprise only · Beta · Contact sales · [Plans](https://www.cloudflare.com/sase/products/access/) |
 
 ## Network security
 

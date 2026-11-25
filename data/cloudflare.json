@@ -155,6 +155,35 @@
         }
       ]
     },
+    "search-for-agents": {
+      "name": "Search for Agents",
+      "group": "Developer platform",
+      "docs": "https://developers.cloudflare.com/ai-search/how-to/search-for-agents/",
+      "description": "Make your website searchable by AI agents with automatic indexing, a discoverable search endpoint, and configurable AI Search defaults",
+      "pricing": "https://developers.cloudflare.com/ai-search/platform/limits-pricing/",
+      "cost": "Beta · All plans · Billed as AI Search: 5M ingestion tokens, 10 GB-mo, 1K semantic + 1K full-text queries free monthly, then AI Search rates · Workers Free crawls 500 pages/day",
+      "alternatives": [
+        {
+          "name": "Algolia",
+          "url": "https://www.algolia.com/"
+        },
+        {
+          "name": "NLWeb",
+          "url": "https://github.com/nlweb-ai/NLWeb",
+          "note": "open source"
+        },
+        {
+          "name": "Meilisearch",
+          "url": "https://www.meilisearch.com/",
+          "note": "open source"
+        },
+        {
+          "name": "Pagefind",
+          "url": "https://pagefind.app/",
+          "note": "static, open source"
+        }
+      ]
+    },
     "ai-security-for-apps": {
       "name": "AI Security for Apps",
       "group": "Application security",
@@ -2232,24 +2261,6 @@
         {
           "name": "Fastly",
           "url": "https://www.fastly.com/"
-        }
-      ]
-    },
-    "multi-cloud-networking": {
-      "cost": "Enterprise only · Beta · Contact sales",
-      "alternatives": [
-        {
-          "name": "Aviatrix",
-          "url": "https://aviatrix.com/"
-        },
-        {
-          "name": "Megaport",
-          "url": "https://www.megaport.com/"
-        },
-        {
-          "name": "Tailscale",
-          "url": "https://tailscale.com/",
-          "note": "open core"
         }
       ]
     },
